@@ -47,3 +47,10 @@ See [52-week seasonal calendar](./SEASONAL_52_WEEK_PLAN.md) for the proposed 13-
 6. Only then replicate canonical versioned course to other campuses.
 
 © Jennifer Kay Pearl
+
+## Culinary recipe and menu ingredient policy
+- The Academy's authored Culinary menus, ingredient lists, games and recipes must be **pork-free**. Do not specify pork, bacon, pork ham, lard, pork-based gelatin, pork sausage, pancetta, prosciutto or pork-derived deli meats as ingredients.
+- Where an adapted traditional recipe requires a smoky, salty or savory substitute, prefer **clearly labeled turkey bacon, turkey ham or turkey sausage** where appropriate; plant-based substitutions or omitting the ingredient are equally valid. Verify product ingredient labels, since names alone do not guarantee the absence of pork-derived ingredients or allergens.
+- When using turkey or other poultry, follow appropriate food-safety guidance, prevent cross-contamination, and ensure it is cooked thoroughly by a responsible adult. Preschool lessons must never direct children to cook raw poultry independently.
+- Outside video links and historical references may describe other food traditions; do not imply that third-party material or all linked resources have been screened. Provide a suitable pork-free Academy alternative for any assigned recipe.
+- Include a **pork-free menu QA check** before publishing each new lesson or meal-planner pack, including recipe titles, ingredient lists, shopping cards, quiz choices and imported content.
