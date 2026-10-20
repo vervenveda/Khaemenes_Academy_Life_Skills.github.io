@@ -84,3 +84,8 @@
 - Created Preschool Little Safety Helpers portal and Days 1–5 about recognizing hazards, identifying helpers, adult-guided safety locations, alerts and asking for help.
 - Five child-friendly lesson sections, a shuffled fifteen-question provisional assessment bank, four-step picture practice, caregiver records, print and export are in source. No real emergency calls, alarms or staged hazards.
 - Week 02 and Week 03 remain pending. Actual browser/255px, accessibility, educator, and print QA not completed. Local records are not authenticated achievements.
+
+## 2026-10-20 Emergency Readiness Week 02
+- Committed Days 6–10 Preschool Little Safety Helpers. Picture-based lessons cover caregiver-led evacuation decisions, shelter decisions, accessible communication, emergency supply awareness, and keeping pets and people safe.
+- Week 02 locally checks five Week 01 practice records, matching learner code, 80% knowledge attempt, and caregiver review; this remains editable and unauthenticated.
+- Five lessons and a fifteen-question knowledge bank are in source; browser, keyboard, 255px, printing and educator review remain pending.
