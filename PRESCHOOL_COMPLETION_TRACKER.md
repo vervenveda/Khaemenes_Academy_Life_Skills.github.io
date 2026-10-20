@@ -44,3 +44,8 @@
 - Committed Health, First Aid & Wellbeing Preschool Week 02 (Days 6–10), including five supervised safety-awareness lessons and a 15-question provisional knowledge bank.
 - Week 02 requires matching device-local Week 01 record: five practice activities, a score-consistent >=80% knowledge attempt and caregiver review. This is not an authenticated qualification or clinical instruction.
 - Educator safety review, 255px/mobile browser, print, keyboard and assessment checks remain pending.
+
+## 2026-10-20 Healthy Helpers Week 03
+- Week 03 Days 11–15 and a private caregiver-reviewed wellness plan capstone committed to main.
+- Week 03 entry checks matching Week 02 device-local practice, scored knowledge evidence and caregiver review; never represents authenticated or medical competence.
+- The 15 lesson pages exist across Weeks 01–03, with browser, accessibility, printable evidence, educator and safety-review QA outstanding.
