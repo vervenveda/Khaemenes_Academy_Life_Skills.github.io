@@ -63,3 +63,14 @@ The Culinary Play Lab links to these canonical Academy source pages. Source-file
 - Preserved the existing locally checked prerequisite structure and ≥80% scored gates; neither is server-verified, and the current ten-question banks are too small for high-stakes certification.
 - **Remaining QA:** manual real-device checks of 255px wrapping, keyboard dialog focus, printed five-day packets, data persistence on abrupt reload, and deployed external resource links. An intentional offline/clear-storage test must not be mistaken for mastery evidence.
 - **Template migration requirement:** when adapting to First Grade, keep safe age progression, learner-separated storage and independent practical approval; do not copy preschool assessment difficulty into a higher grade.
+
+## Forensic hardening pass · 2026-10-20
+
+**Source-level findings and repairs:**
+1. **Week 03 premature/anonymous completion print:** The final-review print action previously proceeded without an active learner, potentially printing an uninformative record. It now requires an opened learner folder, provides an explicit message, and returns focus to the learner-code input.
+2. **Final-review clarity:** The 15-day report now labels each week's local-evidence status, includes the learner alias, shows caregiver-review status, and explicitly states that local evidence is not certification or authenticated performance.
+3. **Prerequisite drift after a record is opened:** Week 02 and Week 03 progress summaries now re-check saved earlier-week evidence as they render, instead of displaying a success message based only on their own week's local records. Formal grading already rechecked prerequisites and was preserved.
+
+**Verified:** Current JavaScript parses successfully for the altered Week 02 and Week 03 pages; the three changes are committed to `main`. Source-level validation is not equivalent to deployed-browser, device or educator acceptance testing.
+
+**Outstanding (not claimed resolved):** Simulate wrong and correct answers in a real browser; test switching sibling aliases and storage corruption; print all 15 day pages; validate 255px layouts and keyboard popup focus; check live links, the existing preschool games, optional resource safety and regional dietary variants; increase independently reviewed assessment question banks and connect an actual educator-authorized enrollment/completion workflow. The Home Helpers link is a preview, not automatic academic approval.
