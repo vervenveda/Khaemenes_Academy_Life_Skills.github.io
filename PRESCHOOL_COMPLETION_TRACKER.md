@@ -39,3 +39,8 @@
 - Committed Week 02 (Days 6–10) and Week 03 (Days 11–15) Preschool Gardening pages to `main`, along with working campus links.
 - Each new week provides five substantive picture-supported lessons, four-step accessible dialogs, caregiver records, device-local learner folders, a shuffled 15-question practice bank, five-question weekly check with an 80% threshold, print and JSON export.
 - Week 02 / 03 entry depends on same-code prior-week device records. This is a convenience gate, not a tamper-proof or authenticated academic score. Manual browser, 255px, accessibility, print, assessment-content and safety tests are outstanding.
+
+## 2026-10-20 Healthy Helpers Week 02
+- Committed Health, First Aid & Wellbeing Preschool Week 02 (Days 6–10), including five supervised safety-awareness lessons and a 15-question provisional knowledge bank.
+- Week 02 requires matching device-local Week 01 record: five practice activities, a score-consistent >=80% knowledge attempt and caregiver review. This is not an authenticated qualification or clinical instruction.
+- Educator safety review, 255px/mobile browser, print, keyboard and assessment checks remain pending.
