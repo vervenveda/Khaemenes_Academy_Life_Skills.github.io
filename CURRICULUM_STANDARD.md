@@ -1,5 +1,14 @@
-# Khaemenes Academy — Life Skills Course Implementation Standard v1.0
+# Khaemenes Academy — Life Skills Course Implementation Standard v1.1
 **Applicability:** All 16 pathways, all five learning stages. **Status:** binding development specification; educational accreditation is not claimed.
+
+## Program calendar and course duration (revised 2026-10-20)
+- One Life Skills class spans **four instructional weeks / 20 learning days**. Each week includes five days of age-appropriate reading, play/practice, authentic activity, reflective evidence and family support.
+- Week 1 foundations and safety; Week 2 skills and practice; Week 3 real-world family application; Week 4 capstone, knowledge assessment, demonstration and parent/teacher review.
+- Formal verified **80% knowledge mastery** is required for weekly progression. Appropriate practical safety competency is independently reviewed.
+- Ten four-week core classes are **40 course-weeks** when taken sequentially; a 36-week school-year plan must document four weeks of overlap or integration rather than silently dropping requirements.
+- A summer accelerated timetable is an optional delivery mode, not reduced content: allocate realistic age-specific time, breaks, supervision, and equivalent evidence. No promise that all ten four-week classes fit a single summer.
+- The current 16-category catalog is retained; the specific ten core courses versus six electives require approval before labeling any category core.
+- Existing 36-week outlines are **legacy planning drafts pending conversion**; do not represent them as already condensed, verified courses.
 
 ## Student learning day
 1. Full-length visible reading/lesson with examples, objectives, vocabulary, and accessible offline version.
@@ -15,7 +24,7 @@
 - Practice score or checking a lesson box does **not** unlock mastery.
 - Scores belong to an explicitly selected learner/course/stage. Avoid attaching an anonymous preview to a student.
 - Practical competencies need separate demonstrated safety approval by the parent/teacher; high knowledge scores alone cannot certify physical competence.
-- A 36-week course needs independent midterm Week 18 and final Week 36, portfolio review, and verifiable completion record; do not issue graduation on a first-week demo.
+- Each four-week course has 20 instructional days, four weekly mastery checks, a Week 4 final practical portfolio review and a final knowledge assessment. Do not issue completion based on a first-week demonstration. Longer programs may use separate midterms where appropriate.
 - Maintain attempt history and opportunity to revise after feedback. No automatic pass from page visits, time spent or log completion.
 - Do not claim identity verification for anonymous local storage; describe device-local evidence as provisional until reviewed.
 
