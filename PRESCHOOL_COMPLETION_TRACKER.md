@@ -59,3 +59,8 @@
 - Implemented Days 6–10 of the Preschool pretend marketplace, with price comparison, pretend saving goals, voluntary sharing and thoughtful choices.
 - Includes a local Week 01 prerequisite check, a 15-question provisional assessment pool, five daily evidence logs and JSON/print support.
 - This remains unverified editable device-local evidence. Educator review and actual browser/255px, accessibility, printable evidence and learner-switch regression tests are outstanding.
+
+## 2026-10-20 Personal Finance Week 03
+- Week 03 (Days 11–15) Preschool picture budgeting, pretend savings, trade-offs, revision and a caregiver-reviewed project are committed on main.
+- Week 03 requires matching local Week 02 record with five practices, a score-consistent 80% assessment and caregiver review. It is not a tamper-proof or authenticated achievement.
+- 15 lesson sections exist across three weeks. Educator content review, 255px and keyboard browser testing, printing and learner switching QA remain pending.
