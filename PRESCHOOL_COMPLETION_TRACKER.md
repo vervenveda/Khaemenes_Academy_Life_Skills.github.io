@@ -54,3 +54,8 @@
 - Added Preschool Little Money Explorers campus and Week 01, Days 1–5, with no mandatory purchases, real money, or banking details.
 - Five picture-supported lessons cover currencies, needs versus wants, counting pretend tokens, saving and thoughtful trade-offs. Week 01 uses device-local provisional assessments and caregiver records, not authenticated mastery.
 - Weeks 02–03 remain in development; browser, keyboard, 255px, print and educator acceptance testing is not complete.
+
+## 2026-10-20 Personal Finance Week 02
+- Implemented Days 6–10 of the Preschool pretend marketplace, with price comparison, pretend saving goals, voluntary sharing and thoughtful choices.
+- Includes a local Week 01 prerequisite check, a 15-question provisional assessment pool, five daily evidence logs and JSON/print support.
+- This remains unverified editable device-local evidence. Educator review and actual browser/255px, accessibility, printable evidence and learner-switch regression tests are outstanding.
