@@ -74,3 +74,8 @@
 - Committed Days 6–10 Preschool Little Earth Helpers lessons on water saving, energy awareness, safe reuse, adult-led repairs and a small household conservation challenge.
 - Five daily lesson activities and fifteen provisional assessment questions are present; matching learner Week 01 evidence, an 80% local knowledge result and adult review are prerequisites for opening Week 02.
 - Mastery is not externally authenticated. Educator review, live browser/255px/keyboard, assessment and printable tests remain open.
+
+## 2026-10-20 Sustainability Week 03
+- Committed Preschool Little Earth Helpers Days 11–15, an accessible family conservation project with planning, truthfully recorded observations, improvement, and presentation.
+- Week 03 checks the matching learner's Week 02 device-local evidence, including all five practices, score-consistent >=80% assessment and caregiver review. This is not an authenticated credential.
+- All 15 lesson sections now exist. Real-browser, offline, 255px, keyboard, print, accessibility, and educator review remain outstanding.
