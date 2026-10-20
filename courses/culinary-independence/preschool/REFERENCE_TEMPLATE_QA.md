@@ -55,3 +55,11 @@ The Culinary Play Lab links to these canonical Academy source pages. Source-file
 - [ ] Expand randomized reviewed assessment bank and add course-level portfolio verification
 
 **No claim of browser QA, external-link reachability, or certification readiness is made by this document.**
+
+## Hardening verification · 2026-10-20
+- Inspected Week 01–03 JavaScript source; all three inline scripts parsed successfully before edits.
+- Hardened Week 02 and Week 03 record-switch workflow: an invalid or prerequisite-blocked candidate now restores the active learner code rather than leaving the input showing one learner while another learner's details remain displayed.
+- Week 02 and Week 03 now save changed daily dates, observation notes, family reflection, reviewer name and practical-review checkbox to device storage on field change; existing explicit Save, Print and Export remain available.
+- Preserved the existing locally checked prerequisite structure and ≥80% scored gates; neither is server-verified, and the current ten-question banks are too small for high-stakes certification.
+- **Remaining QA:** manual real-device checks of 255px wrapping, keyboard dialog focus, printed five-day packets, data persistence on abrupt reload, and deployed external resource links. An intentional offline/clear-storage test must not be mistaken for mastery evidence.
+- **Template migration requirement:** when adapting to First Grade, keep safe age progression, learner-separated storage and independent practical approval; do not copy preschool assessment difficulty into a higher grade.
