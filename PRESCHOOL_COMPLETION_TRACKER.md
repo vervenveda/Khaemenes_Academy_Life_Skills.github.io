@@ -49,3 +49,8 @@
 - Week 03 Days 11–15 and a private caregiver-reviewed wellness plan capstone committed to main.
 - Week 03 entry checks matching Week 02 device-local practice, scored knowledge evidence and caregiver review; never represents authenticated or medical competence.
 - The 15 lesson pages exist across Weeks 01–03, with browser, accessibility, printable evidence, educator and safety-review QA outstanding.
+
+## 2026-10-20 Personal Finance Week 01
+- Added Preschool Little Money Explorers campus and Week 01, Days 1–5, with no mandatory purchases, real money, or banking details.
+- Five picture-supported lessons cover currencies, needs versus wants, counting pretend tokens, saving and thoughtful trade-offs. Week 01 uses device-local provisional assessments and caregiver records, not authenticated mastery.
+- Weeks 02–03 remain in development; browser, keyboard, 255px, print and educator acceptance testing is not complete.
