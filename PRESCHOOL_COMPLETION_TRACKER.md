@@ -64,3 +64,8 @@
 - Week 03 (Days 11–15) Preschool picture budgeting, pretend savings, trade-offs, revision and a caregiver-reviewed project are committed on main.
 - Week 03 requires matching local Week 02 record with five practices, a score-consistent 80% assessment and caregiver review. It is not a tamper-proof or authenticated achievement.
 - 15 lesson sections exist across three weeks. Educator content review, 255px and keyboard browser testing, printing and learner switching QA remain pending.
+
+## 2026-10-20 Sustainability Week 01
+- Created Little Earth Helpers Preschool campus and Week 01 (Days 1–5) on main with safe environmental observation, water care, picture-only sorting, looking after belongings and household sustainability choices.
+- Includes five original lessons, four-step picture activities, a provisional 15-question assessment bank, local caregiver observations, printable evidence and export.
+- Weeks 02–03 remain planned. Browser, keyboard, 255px, content and print QA are not yet complete; local progress is not authenticated.
