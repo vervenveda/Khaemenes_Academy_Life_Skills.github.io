@@ -4,8 +4,8 @@
 ## Verified repository inventory
 - Culinary Independence: Week 01, Week 02, Week 03, preschool portal and play lab committed. All 15 days are present; cross-week evidence review and browser-level testing remain open. Do not represent localStorage self-report as official verified achievement.
 - Home Management: preschool landing portal and Weeks 01–03 (15 daily lessons) committed. Weeks 02–03 now require same-alias prior-week local evidence, ≥80% scored attempt, all five daily checks and caregiver review; full browser verification and independent authenticated scoring remain outstanding.
-- Gardening & Food Growing: preschool landing page and all three interactive five-day modules (15 lesson pages) committed. Week 2 and Week 3 include device-local prior-week checks; assessment banks and safety activities require educator and real-browser validation. No authenticated mastery is claimed.\n- Other 13 subject pathways: three-week planning blueprints exist; their preschool lessons are not yet written or certified.
-- First Grade Culinary: separate bridged landing page exists. Never auto-transfer preschool scores as first-grade mastery.
+- Gardening & Food Growing: preschool landing page and all three interactive five-day modules (15 lesson pages) committed. Week 2 and Week 3 include device-local prior-week checks; assessment banks and safety activities require educator and real-browser validation. No authenticated mastery is claimed.\n- Other 12 subject pathways: three-week planning blueprints exist; their preschool lessons are not yet written or certified.
+- Creativity, Arts & Making: Preschool portal and Week 01 (Days 1–5) now committed. Weeks 02–03 still planned. Fifteen-question local knowledge bank and activities await educator, browser, accessibility and print validation.\n- First Grade Culinary: separate bridged landing page exists. Never auto-transfer preschool scores as first-grade mastery.
 
 ## Mandatory reusable Preschool lesson package
 1. Child-visible illustrated story or original practical reading with explicit adult safety notes.
