@@ -79,3 +79,8 @@
 - Committed Preschool Little Earth Helpers Days 11–15, an accessible family conservation project with planning, truthfully recorded observations, improvement, and presentation.
 - Week 03 checks the matching learner's Week 02 device-local evidence, including all five practices, score-consistent >=80% assessment and caregiver review. This is not an authenticated credential.
 - All 15 lesson sections now exist. Real-browser, offline, 255px, keyboard, print, accessibility, and educator review remain outstanding.
+
+## 2026-10-20 Emergency Readiness Week 01
+- Created Preschool Little Safety Helpers portal and Days 1–5 about recognizing hazards, identifying helpers, adult-guided safety locations, alerts and asking for help.
+- Five child-friendly lesson sections, a shuffled fifteen-question provisional assessment bank, four-step picture practice, caregiver records, print and export are in source. No real emergency calls, alarms or staged hazards.
+- Week 02 and Week 03 remain pending. Actual browser/255px, accessibility, educator, and print QA not completed. Local records are not authenticated achievements.
