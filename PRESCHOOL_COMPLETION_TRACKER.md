@@ -3,7 +3,7 @@
 
 ## Verified repository inventory
 - Culinary Independence: Week 01, Week 02, Week 03, preschool portal and play lab committed. All 15 days are present; cross-week evidence review and browser-level testing remain open. Do not represent localStorage self-report as official verified achievement.
-- Home Management: preschool landing portal and Week 01 (Days 1–5) now committed. Week 02 and Week 03 not yet developed.
+- Home Management: preschool landing portal and Weeks 01–03 (15 daily lessons) committed. Weeks 02–03 now require same-alias prior-week local evidence, ≥80% scored attempt, all five daily checks and caregiver review; full browser verification and independent authenticated scoring remain outstanding.
 - Other 14 subject pathways: three-week planning blueprints exist; their preschool lessons are not yet written or certified.
 - First Grade Culinary: separate bridged landing page exists. Never auto-transfer preschool scores as first-grade mastery.
 
@@ -18,8 +18,8 @@
 8. Strict 255px and keyboard/mobile/print/offline testing before marking release browser-verified.
 
 ## Next implementation order
-1. Finish Home Management Weeks 02 and 03 including full family capstone and independently reviewed assessment gates.
-2. Audit integrated Culinary <> Home navigation, practice game links and scoring / persistence in a real browser.
+1. Browser-test Home Management Weeks 01–03, including prior-week locks, record recovery, false/altered local scores, 255px layouts and final capstone.
+2. Review the Culinary → Home transition with an educator; preserve separate course marks. Expand reviewed assessment banks beyond ten items and test end-to-end learner switching.
 3. Build Gardening & Food Growing in seasonal, container-friendly preschool mode and Creativity, Arts & Making with culturally inclusive celebrations.
 4. Complete the remaining 12 preschool courses one three-week course at a time, using the same template and preserving individual safety rules.
 5. Add central preschool course selector and parent review dashboard only after per-course records are stable; keep unknown course cards nonclickable.
@@ -29,3 +29,8 @@
 - A ten-question bank with five questions per attempt is a *starting* review bank, not the target 3x production bank.
 - GitHub source commits and JavaScript syntax checks are not real-browser acceptance tests.
 - Existing preschool games are linked by known repository paths; verify live availability and user experience before claiming every game is fully tested.
+
+## 2026-10-20 hardening note
+- Fixed a misleading Culinary breadcrumb on Home Helpers Week 01.
+- Added Week 02/03 prerequisite checks for the same device-local learner code, five completed day practices, caregiver signoff and a score-consistent local knowledge attempt ≥80% from the preceding week. This is a convenience gate, **not tamper-proof or remotely verified mastery**.
+- Offline portfolio transfers, robust imported evidence verification, accessible alternatives and actual browser regression tests remain pending.
