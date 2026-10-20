@@ -1,13 +1,13 @@
-# Khaemenes Academy — Life Skills Course Implementation Standard v1.1
+# Khaemenes Academy — Life Skills Course Implementation Standard v1.2
 **Applicability:** All 16 pathways, all five learning stages. **Status:** binding development specification; educational accreditation is not claimed.
 
 ## Program calendar and course duration (revised 2026-10-20)
-- One Life Skills class spans **four instructional weeks / 20 learning days**. Each week includes five days of age-appropriate reading, play/practice, authentic activity, reflective evidence and family support.
-- Week 1 foundations and safety; Week 2 skills and practice; Week 3 real-world family application; Week 4 capstone, knowledge assessment, demonstration and parent/teacher review.
+- One Life Skills class spans **three instructional weeks / 15 learning days**. Each week includes five days of age-appropriate reading, play/practice, authentic activity, reflective evidence and family support.
+- Week 1 foundations and safety; Week 2 practiced skills and family application; Week 3 independent or supervised capstone, final knowledge assessment, demonstration and parent/teacher review.
 - Formal verified **80% knowledge mastery** is required for weekly progression. Appropriate practical safety competency is independently reviewed.
-- **All 16 subjects** are included. Sixteen four-week courses require **64 course-weeks** of instruction; a 52-week calendar needs **three four-week periods containing two concurrent courses** (13 periods, 16 course placements). Concurrent courses keep independent instructional and mastery requirements.
+- **All 16 subjects** are included. Sixteen three-week courses require **48 instructional weeks**, fitting sequentially within **52 calendar weeks** with **four flexible weeks** for breaks, catch-up, seasonal experiences, or portfolio reviews. Concurrent enrollment is optional, not needed.
 - Seasonal flexibility: offer gardening near a suitable local growing season and arts/making around locally relevant traditions or holidays (including optional December craft projects). Never assume Northern Hemisphere seasons or that all families observe the same holiday. Provide secular and culturally inclusive alternatives.
-- The 16-category catalog remains intact. The 52-week plan is a sample start-anytime calendar; family-paced or summer modules may be moved while retaining four weeks / 20 instructional days per course. No forced holiday attendance or unsafe seasonal tasks.
+- The 16-category catalog remains intact. The 52-week plan is a sample start-anytime calendar; family-paced or summer modules may be moved while retaining three weeks / 15 instructional days per course. No forced holiday attendance or unsafe seasonal tasks.
 - Existing 36-week outlines are **legacy planning drafts pending conversion**; do not represent them as already condensed, verified courses.
 
 See [52-week seasonal calendar](./SEASONAL_52_WEEK_PLAN.md) for the proposed 13-block schedule and required double-course periods.
@@ -26,7 +26,7 @@ See [52-week seasonal calendar](./SEASONAL_52_WEEK_PLAN.md) for the proposed 13-
 - Practice score or checking a lesson box does **not** unlock mastery.
 - Scores belong to an explicitly selected learner/course/stage. Avoid attaching an anonymous preview to a student.
 - Practical competencies need separate demonstrated safety approval by the parent/teacher; high knowledge scores alone cannot certify physical competence.
-- Each four-week course has 20 instructional days, four weekly mastery checks, a Week 4 final practical portfolio review and a final knowledge assessment. Do not issue completion based on a first-week demonstration. Longer programs may use separate midterms where appropriate.
+- Each three-week course has 15 instructional days, three weekly mastery checks, a Week 3 final practical portfolio review and a final knowledge assessment. Do not issue completion based on a first-week demonstration. Longer programs may use separate midterms where appropriate.
 - Maintain attempt history and opportunity to revise after feedback. No automatic pass from page visits, time spent or log completion.
 - Do not claim identity verification for anonymous local storage; describe device-local evidence as provisional until reviewed.
 
