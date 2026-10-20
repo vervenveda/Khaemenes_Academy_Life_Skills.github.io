@@ -69,3 +69,8 @@
 - Created Little Earth Helpers Preschool campus and Week 01 (Days 1–5) on main with safe environmental observation, water care, picture-only sorting, looking after belongings and household sustainability choices.
 - Includes five original lessons, four-step picture activities, a provisional 15-question assessment bank, local caregiver observations, printable evidence and export.
 - Weeks 02–03 remain planned. Browser, keyboard, 255px, content and print QA are not yet complete; local progress is not authenticated.
+
+## 2026-10-20 Sustainability Week 02
+- Committed Days 6–10 Preschool Little Earth Helpers lessons on water saving, energy awareness, safe reuse, adult-led repairs and a small household conservation challenge.
+- Five daily lesson activities and fifteen provisional assessment questions are present; matching learner Week 01 evidence, an 80% local knowledge result and adult review are prerequisites for opening Week 02.
+- Mastery is not externally authenticated. Educator review, live browser/255px/keyboard, assessment and printable tests remain open.
