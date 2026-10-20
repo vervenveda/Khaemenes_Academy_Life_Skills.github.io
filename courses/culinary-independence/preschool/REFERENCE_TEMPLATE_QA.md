@@ -74,3 +74,11 @@ The Culinary Play Lab links to these canonical Academy source pages. Source-file
 **Verified:** Current JavaScript parses successfully for the altered Week 02 and Week 03 pages; the three changes are committed to `main`. Source-level validation is not equivalent to deployed-browser, device or educator acceptance testing.
 
 **Outstanding (not claimed resolved):** Simulate wrong and correct answers in a real browser; test switching sibling aliases and storage corruption; print all 15 day pages; validate 255px layouts and keyboard popup focus; check live links, the existing preschool games, optional resource safety and regional dietary variants; increase independently reviewed assessment question banks and connect an actual educator-authorized enrollment/completion workflow. The Home Helpers link is a preview, not automatic academic approval.
+
+## Re-audit and next-step hardening · 2026-10-20
+- Verified source-tree existence for all three Culinary weeks, Preschool Play Lab, and Grade 1 bridge. No unsupported claim of deployed-browser success.
+- Verified Weeks 02 and 03 include earlier-week learner-specific local prerequisite checks, and checked stored answer structure against the locally bundled question banks. These remain editable device records, **not external verified scores**.
+- Added a friendly, learner-code-specific **My Three-Week Kitchen Journey** to the Preschool Culinary landing page. It reports **basic completion markers only**, labels itself non-certifying, and opens the matching weekly pages. The actual weekly prerequisite logic is kept on those course pages.
+- Identified a remaining clarity issue: the original introductory module coexists with the newer three-week sequence. Do not remove or break the legacy sandbox without preserving learner records; consider relabeling it as optional archived practice in a later surgical pass.
+- Still outstanding: browser-run automated scored-answer tests (including forged/corrupt data), manual 255px and keyboard tests, print page verification, actual live external app checks, and educator review of final assessment banks.
+- First Grade is an **orientation preview** only; it cannot inherit preschool grades as authenticated enrollment or automatically issue promotion.
