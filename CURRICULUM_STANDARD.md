@@ -5,10 +5,12 @@
 - One Life Skills class spans **four instructional weeks / 20 learning days**. Each week includes five days of age-appropriate reading, play/practice, authentic activity, reflective evidence and family support.
 - Week 1 foundations and safety; Week 2 skills and practice; Week 3 real-world family application; Week 4 capstone, knowledge assessment, demonstration and parent/teacher review.
 - Formal verified **80% knowledge mastery** is required for weekly progression. Appropriate practical safety competency is independently reviewed.
-- Ten four-week core classes are **40 course-weeks** when taken sequentially; a 36-week school-year plan must document four weeks of overlap or integration rather than silently dropping requirements.
-- A summer accelerated timetable is an optional delivery mode, not reduced content: allocate realistic age-specific time, breaks, supervision, and equivalent evidence. No promise that all ten four-week classes fit a single summer.
-- The current 16-category catalog is retained; the specific ten core courses versus six electives require approval before labeling any category core.
+- **All 16 subjects** are included. Sixteen four-week courses require **64 course-weeks** of instruction; a 52-week calendar needs **three four-week periods containing two concurrent courses** (13 periods, 16 course placements). Concurrent courses keep independent instructional and mastery requirements.
+- Seasonal flexibility: offer gardening near a suitable local growing season and arts/making around locally relevant traditions or holidays (including optional December craft projects). Never assume Northern Hemisphere seasons or that all families observe the same holiday. Provide secular and culturally inclusive alternatives.
+- The 16-category catalog remains intact. The 52-week plan is a sample start-anytime calendar; family-paced or summer modules may be moved while retaining four weeks / 20 instructional days per course. No forced holiday attendance or unsafe seasonal tasks.
 - Existing 36-week outlines are **legacy planning drafts pending conversion**; do not represent them as already condensed, verified courses.
+
+See [52-week seasonal calendar](./SEASONAL_52_WEEK_PLAN.md) for the proposed 13-block schedule and required double-course periods.
 
 ## Student learning day
 1. Full-length visible reading/lesson with examples, objectives, vocabulary, and accessible offline version.
