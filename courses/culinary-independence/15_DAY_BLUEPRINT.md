@@ -9,6 +9,9 @@
 ### Course outcome and capstone
 Design, budget, prepare safely, and document a balanced meal appropriate to learner ability.
 
+### Culinary ingredient and dietary policy
+All Academy-authored Culinary menus, recipe examples, game food cards, shopping lists and printable meals must be **pork-free**. Do not include bacon, ham, pork sausage, pork ribs, lard, pancetta, prosciutto or pork-derived ingredients. Where a comparable dish is desired, use **turkey alternatives** (for example turkey bacon, turkey ham or turkey sausage) with accurate product labeling and preparation instructions; vegetarian alternatives are welcome. **Check ingredient labels:** processed turkey products and cheese may have other dietary or allergen considerations, and recipes must identify age-related choking risks and require appropriate caregiver preparation. Do not automatically substitute turkey in an instructional explanation about allergens or ingredient labels where accurate terminology is needed. Review external recipe sources before assigning.
+
 ### Essential foundations
 1. Kitchen orientation, hygiene, allergies, and safe adult supervision.
 2. Ingredients, measuring, units, substitutions, and recipe literacy.
