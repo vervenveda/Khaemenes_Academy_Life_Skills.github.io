@@ -137,3 +137,10 @@ Updated: 2026-10-20 · Branch: main
 - Content deepened: pretend pigment mixing (distinguished from additive light), geometric collage, AB/AAB/ABB/ABC repeat patterns, feelings through line, safe gallery labels, visual textures, paper engineering, three-panel narrative, inclusive design, feedback and original portfolio showcase.
 - Re-fetched 3 weekly pages after main commits: 5 original lessons and 5 teaching-depth blocks each; 15 weekly quiz questions each; 3 original game cards each; JSON restoration and printable evidence code retained; JavaScript parsing passed throughout.
 - The formal assessment banks, mastery rules and local-storage namespaces were left unchanged. Runtime browser/mobile/assistive-tech/print acceptance remains open.
+
+## Halfway-audit Bubble 2 — Health, First Aid & Wellbeing lesson depth
+- Deepened all 15 Health, First Aid & Wellbeing lessons in Weeks 01–03: distinct examples, guided caregiver-led activities, independent paper/picture challenges, and accessible caregiver teaching guidance.
+- Coverage: handwashing, sleep/rest, food and water safety, adaptive movement, emotional awareness, trusted adults, reporting injuries, location-specific emergency help (no real practice calls), calm supports, safety boundaries and a reflective portfolio.
+- No unsupervised treatment, touching real injuries/blood, medicines or emergency-response certification; private contacts and health details must not appear on public work.
+- Re-fetched all three committed weekly pages: 5 lessons and 5 teaching-depth blocks per page, 15 original assessment questions, retained JSON recovery and printed learner-note functionality, zero JS parsing errors. No changes to mastery/record schemas.
+- Browser, print, keyboard, 255px and offline end-to-end certification remain pending.
