@@ -118,3 +118,10 @@ Updated: 2026-10-20 · Branch: main
 - Updated 18 non-Culinary pages with subject-specific learner safeguards and accurate knowledge-check language; cleaned repeated 'My' headings in the affected pages, including Emergency Weeks 02/03.
 - Re-fetched all 21 classrooms after changes: all passed JS syntax parsing, retained 15-question banks, and no longer contained inherited 'real kitchen competence', the inherited kitchen warning, or repeated 'My My' course titles.
 - Remaining priorities: expand lesson instructional depth, differentiated games, browser/keyboard/255px testing and deployed/offline verification. The work was committed to main; not yet certified in a browser.
+
+## Halfway-audit Bubble 2 — Home Management curriculum depth
+- Expanded every lesson in Home Management Weeks 01–03 (15 lessons total) with a worked real-life example, guided shared activity, independent picture-based challenge and inclusive caregiver teaching guidance.
+- Instruction supports shared and temporary homes, differing routines, disability accommodations, child-safe activities, non-gendered roles and safe family support; no appliances or chemicals required.
+- Re-fetched all three week files: exactly 5 instructional blocks and 5 original lessons per week, 15 intact assessment questions per week, visible portfolio restore/print-note code, no JavaScript parsing errors.
+- Existing learner storage, progression, assessment logic and authored games were not changed. Full browser, offline, responsive and print-output acceptance remains pending.
+- Next depth candidates: Gardening, Creativity and other age-appropriate courses; keep lessons substantial without clutter.
