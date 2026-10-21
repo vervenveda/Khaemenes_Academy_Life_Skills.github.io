@@ -213,3 +213,8 @@ Structural coverage recorded as 240/240 lesson sections, **not** 240 independent
 - Each header identifies Khaemenes Academy, Preschool, course, week, unit, sequential lesson, student, date and caregiver; no learner storage identifiers or assessment code changed. Print-only styling hides the headers on screen.
 - Re-fetched Gardening Weeks 01–03 and confirmed five print headers per weekly file and matching existing unit/lesson tags. Updates for the remaining five subjects passed source-level five-header checks before commit. Actual rendered print/PDF and 255px accessibility QA remain open.
 - Culinary Independence and Home Management use distinct legacy markup, so their printable evidence is still pending a careful tailored pass. The production-source mastery harness currently checks Culinary and Home only; wider direct-source mastery coverage remains open.
+
+## 2026-10-20 Legacy print coverage completion
+- Culinary Independence Weeks 01–03 already had per-lesson `print-id` identifiers; enriched all 15 existing blocks with unit, numbered lesson and caregiver signature fields, without duplicating print headers.
+- Home Management Weeks 01–03 lacked dedicated print evidence headers; added 15 per-lesson print-only blocks with Academy, Preschool, course, week, unit, sequential lesson, student, date and caregiver fields.
+- All six modified files passed JavaScript parsing; GitHub re-fetch verified 5 lesson sections and five matching headers per file. No quizzes or learner storage keys changed. Rendered print/PDF validation and broader end-to-end QA still pending.
