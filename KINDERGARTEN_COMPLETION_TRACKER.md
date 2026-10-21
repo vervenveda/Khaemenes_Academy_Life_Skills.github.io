@@ -43,3 +43,10 @@ Updated: 2026-10-20 · Branch: main
 - Linked Kindergarten grade gateway course card, leaving Preschool foundational review clearly optional.
 - Fixed initial Week 03 self-prerequisite reference; actual Week 02/03 gate functions subsequently checked against synthetic passed, forged-score and missing-caregiver-review records; all test expectations held. Re-fetched weekly files, confirmed 5 daily sections and 15 unique question prompts each with JavaScript syntax passes.
 - Interactive browser, offline, 255px device, screen-reader, exported JSON and print-layout acceptance remain open. No claim of production certification.
+
+## 2026-10-20 Fourth Kindergarten pathway — Creativity, Arts & Making
+- Added independent Kindergarten Creativity hub and Weeks 01–03 with 15 original art lessons and three independent 15-question banks, randomized five-question 80% mastery, caregiver review, portfolio print and JSON export using distinct `khae.life.creativity-arts-making.kindergarten.weekNN.v1.` records.
+- Lessons span safe color exploration, shapes, simple and complex patterns, texture, paper models, visual storytelling, accessibility, reflection and final gallery.
+- Three optional client-side practice cards per week: pretend color mixing, pattern building (AB/AAB/ABB), and a gallery-label maker. These are not quiz or graduation credit.
+- Re-fetched all three week files: 5 lessons, 15 unique weekly prompts and 3 game cards each; both Week 02/03 actual prior-week validators permitted synthetic genuine passing learner records and denied missing caregiver review. Week 03 priorPrefix correctly targets Week 02.
+- Kindergarten landing card now links to grade-specific Creativity hub; Preschool creative lessons remain optional review. Real browser, print output, 255px, game functional and assistive technology acceptance pending.
