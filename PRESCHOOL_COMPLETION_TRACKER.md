@@ -113,3 +113,9 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Bubble 2: PENDING — substantial topic-specific child-centered lesson and question-bank improvement needed, especially in eight recently scaffolded courses; do not label them A+++ or fully content-audited.
 - Bubble 4: PENDING — device/browser accessibility, offline and import/recovery end-to-end testing not yet run.
 - All changes were surgical to newer Week 02/03 files; existing localStorage namespaces were preserved. Production certification remains withheld.
+
+## 2026-10-20 Transportation Week 01 curriculum re-audit and upgrade
+- Re-audited the Preschool directory and Transportation Weeks 01–02. Found generic tripled quiz prompts, short templated lesson readings, and missing per-lesson print evidence on Week 01.
+- Replaced five Week 01 readings with transportation-specific safety and accessibility instruction and 15 differentiated questions. Added five Academy/learner/date/caregiver print headers.
+- Updated Week 02 predecessor answer verification to accept both the revised Week 01 answers and previous correctly scored legacy Week 01 attempts. Existing learner storage namespaces unchanged.
+- New Week 01 assessment still requires live browser, teaching, 255px, keyboard and paper preview QA. Existing Week 02/03 content depth and the other subjects remain to be hardened.
