@@ -30,7 +30,7 @@ for p in pages:
   result=target(p,ref)
   if result and result[0]=='local' and not result[1].exists():errors.append(f'{p.relative_to(ROOT)}: missing local target {ref}')
   if result and result[0]=='outside':warnings.append(f'{p.relative_to(ROOT)}: reference outside repo {ref}')
- if 'dietary-companion.js' not in t.scripts:errors.append(f'{p.relative_to(ROOT)}: dietary companion not linked')
+ if not any(x.endswith('dietary-companion.js') for x in t.scripts):errors.append(f'{p.relative_to(ROOT)}: dietary companion not linked')
  if not t.buttons and '/week-' in str(p):warnings.append(f'{p.relative_to(ROOT)}: no interactive buttons')
  for b in t.buttons:
   if not b.get('id') and not any(k.startswith('data-') for k in b) and not b.get('onclick'):
