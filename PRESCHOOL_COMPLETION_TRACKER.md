@@ -136,3 +136,9 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Rewrote Civic & Community Living Preschool Week 01 Days 1–5 around community helpers, services, welcoming differences, taking turns, picture ballots, and fair rules; replaced 15 generic quiz items with distinct subject-specific questions and added five lesson print evidence headers.
 - Implemented an original offline-only, no-personal-data picture-ballot exercise (storybook versus nature drawing) with visible counts, one choice per practice round, and reset. It is a mock classroom activity, not a real-world election.
 - Updated Civic Week 02 prior-week gate to accept original and revised Week 01 correct answers, preserving same learner storage keys. Source-level syntax checks performed; actual browser, 255px, screen-reader, print and educator QA still required.
+
+## 2026-10-20 Civic & Community Living Weeks 02–03 depth certification candidate
+- Replaced generic lesson explanations and generic assessments in Preschool Civic Weeks 02–03. Week 02 now explores differing voices, no-cost help, public-space accessibility, fair pretend choices and community helpers; Week 03 guides a five-day community-improvement picture capstone.
+- Each week has fifteen distinct subject-specific knowledge questions and five tailored picture activity sequences. Fixed inherited emergency-readiness header text.
+- Updated Week 03 prior-week answer validation to accept both updated Civic Week 02 quiz answers and original correctly scored legacy questions. localStorage keys unchanged.
+- Only code/source-level checks performed; browser voting interaction, all 255px/offline/print/keyboard and educator acceptance QA remain pending. One Nation For All repository left unchanged.
