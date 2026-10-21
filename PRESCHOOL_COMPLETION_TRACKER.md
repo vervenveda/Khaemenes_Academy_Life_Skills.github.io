@@ -119,3 +119,9 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Replaced five Week 01 readings with transportation-specific safety and accessibility instruction and 15 differentiated questions. Added five Academy/learner/date/caregiver print headers.
 - Updated Week 02 predecessor answer verification to accept both the revised Week 01 answers and previous correctly scored legacy Week 01 attempts. Existing learner storage namespaces unchanged.
 - New Week 01 assessment still requires live browser, teaching, 255px, keyboard and paper preview QA. Existing Week 02/03 content depth and the other subjects remain to be hardened.
+
+## 2026-10-20 Transportation Weeks 02–03 deepening
+- Replaced generic Week 02 and Week 03 reading paragraphs and five lesson-step sequences with original maps, landmarks, public-space supervision, rider safety, accessibility, weather and journey-planning instruction.
+- Replaced 15 generic questions per week with topic-specific assessments (30 questions total) and retained 80% scoring; the source passed JavaScript parsing.
+- Week 03 predecessor checking now recognizes both newly revised Week 02 questions and previously saved valid legacy Week 02 responses, without changing existing localStorage keys.
+- Manual browser, actual print preview, 255px, accessibility, teaching accuracy and learner switching tests remain outstanding.
