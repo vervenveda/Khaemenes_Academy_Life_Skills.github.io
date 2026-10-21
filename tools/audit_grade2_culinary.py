@@ -32,6 +32,8 @@ for week in range(1,4):
         "print": 'window.print()' in s,
         "portfolio_export": '"export").onclick' in s,
         "guarded_restore": 'restoreSignature' in s and 'incoming.learnerCode!==code' in s,
+        "written_evidence_prompt": 'My written reasoning, measurements, or revision evidence' in s,
+        "practice_evidence_confirmation": 'I completed this practice and recorded evidence' in s,
         "mastery_garden": 'Mastery earned!' in s,
     }
     if week>1:
