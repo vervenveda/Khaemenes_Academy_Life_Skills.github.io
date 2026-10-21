@@ -6,6 +6,7 @@ on:
     paths:
       - 'courses/kindergarten/**'
       - 'tools/audit_kindergarten.py'
+      - 'tools/audit_kindergarten_import_identity.py'
       - '.github/workflows/kindergarten-source-audit.yml'
 jobs:
   inspect:
@@ -19,10 +20,15 @@ jobs:
           node-version: '22'
       - name: Inventory, link, identifier and JavaScript syntax checks
         run: python3 tools/audit_kindergarten.py > kindergarten-source-audit.json
+      - name: Inventory portfolio import identity protections (non-blocking until repaired)
+        continue-on-error: true
+        run: python3 tools/audit_kindergarten_import_identity.py > kindergarten-import-identity-audit.json
       - name: Preserve audit evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kindergarten-source-audit
-          path: kindergarten-source-audit.json
+          path: |
+            kindergarten-source-audit.json
+            kindergarten-import-identity-audit.json
           if-no-files-found: warn
