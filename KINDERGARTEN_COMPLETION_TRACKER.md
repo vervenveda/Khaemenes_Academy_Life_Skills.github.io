@@ -73,3 +73,9 @@ Updated: 2026-10-20 · Branch: main
 - Added standardized printable optional-game/project evidence page area (learner, reflection lines, caregiver/date) to each classroom. Actual interactive project screenshots are **not** embedded; hand-written reflection space is provided instead.
 - Re-fetched all 12 files and checked import markup, game-evidence print markup, and JavaScript syntax: 12/12 PASS.
 - Open certification: live browser import testing, print layout, 255px responsiveness, offline storage and keyboard/screen-reader QA; verify Pages deployment for this final commit. Imported record trust (quiz deliberately reset) should be communicated to families.
+
+## Fifth Kindergarten course — Health, First Aid & Wellbeing
+- Added three Kindergarten Health and Wellbeing weekly classrooms (15 lessons, three 15-question quiz banks, local progress, caregiver review, print evidence, JSON export/import with imported quiz scores reset) and connected an independent three-week course hub to the Kindergarten gateway.
+- Subject progression: healthy hygiene/rest/food/movement; feelings and trusted helpers, safe injury response and local emergency awareness; wellness project with boundaries, safe adult support and reflection. These are learning activities, never medical or first-aid certification.
+- Verified five lessons and 15 question prompts each; Week 02 and 03 validators accept synthetic eligible records and reject records missing caregiver review. All three newly added scripts parse. Import/print and 255px real browser acceptance still pending.
+- Deployment at pass start: latest previous portfolio commit `7c51bdbc` had GitHub Pages workflow in progress; new commits require their own deployment verification.
