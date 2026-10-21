@@ -105,3 +105,11 @@
 5. **Navigation and progression assurance (P1):** Remove inherited Emergency Readiness headings or other template carryovers in newer courses; verify all 16 portals, breadcrumbs, internal and external navigation, capstone criteria and age/stage handoff, as well as any stale language in the tracker.
 
 Audit scope: repository content checks and seven sampled week-page JavaScript syntax checks, not automated exhaustive 48-page/browser end-to-end testing. No production qualification implied.
+
+## 2026-10-20 Five-bubble repair pass — checkpoint
+- Bubble 1: Inspected 16 cross-week readiness gates across eight newly built courses. Previous-week keys and their 15-answer maps were present. Hardened source-level acceptance of prior quiz attempts to reject empty recorded selections; the records remain editable and are not independent authentication.
+- Bubble 3: Added repeatable Khaemenes Academy, Preschool, student/date and caregiver evidence fields to all five daily printed pages in those 16 cross-week files. Existing print layout still needs rendered-browser inspection and course title/grade confirmation.
+- Bubble 5: Verified directory contains 16 distinct course links without stale pending cards, and corrected previously discovered cross-week namespace defects.
+- Bubble 2: PENDING — substantial topic-specific child-centered lesson and question-bank improvement needed, especially in eight recently scaffolded courses; do not label them A+++ or fully content-audited.
+- Bubble 4: PENDING — device/browser accessibility, offline and import/recovery end-to-end testing not yet run.
+- All changes were surgical to newer Week 02/03 files; existing localStorage namespaces were preserved. Production certification remains withheld.
