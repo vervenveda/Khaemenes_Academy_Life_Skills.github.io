@@ -131,3 +131,9 @@ Updated: 2026-10-20 · Branch: main
 - Scientific care emphasized: observation vs expectation, diverse real plant requirements, different habitats, suitable light/water, no tasting seeds or touching insects, safe alternatives to real seeds/soil, accessible container/paper gardens, privacy-respecting portfolio.
 - Re-fetched the 3 weekly pages after commits: each contains 5 new teaching-depth blocks and 5 lessons, intact 15-question bank, portfolio JSON restore and print-note support; all embedded JavaScript passed syntax validation.
 - Academic/runtime caveat: live-browser, print-page visual inspection, offline persistence and 255px keyboard/accessibility acceptance remain pending. Previous Home Management was depth-enhanced similarly.
+
+## Halfway-audit Bubble 2 — Creativity, Arts & Making lesson depth
+- Expanded all 15 Creativity lessons (Weeks 01–03) with distinct modeled examples, guided activities, independent picture-design challenges and accessibility/safety-minded caregiver notes.
+- Content deepened: pretend pigment mixing (distinguished from additive light), geometric collage, AB/AAB/ABB/ABC repeat patterns, feelings through line, safe gallery labels, visual textures, paper engineering, three-panel narrative, inclusive design, feedback and original portfolio showcase.
+- Re-fetched 3 weekly pages after main commits: 5 original lessons and 5 teaching-depth blocks each; 15 weekly quiz questions each; 3 original game cards each; JSON restoration and printable evidence code retained; JavaScript parsing passed throughout.
+- The formal assessment banks, mastery rules and local-storage namespaces were left unchanged. Runtime browser/mobile/assistive-tech/print acceptance remains open.
