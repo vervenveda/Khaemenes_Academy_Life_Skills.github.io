@@ -66,3 +66,10 @@ Updated: 2026-10-20 · Branch: main
 - **Source validation:** all 12 upgraded HTML files re-fetched; each contains print evidence extension and JS parsed without syntax errors.
 - **Still open:** actual live deployed browser keyboard/screen-reader inspection, 255px horizontal overflow testing, popup-print accessibility, offline behavior and full end-to-end progression/portfolio QA. The environment could not connect to live vervenveda.com during this pass; no visual/browser success claimed.
 - **Potential follow-up:** consider replacing popup-based recipe printing with an integrated printable project area, and add device-level export/import and full browser regression tests.
+
+## 2026-10-20 Kindergarten recovery and practice-print hardening
+- Added a weekly JSON restore control to all 12 Kindergarten classroom pages. Restore requires an open matching learner code, subject and week, validates five boolean practice flags, five short notes, caregiver fields and attempt-envelope shape, limits files to 250 kB, and asks before overwriting an existing local record.
+- For safety, imported quiz attempts are deliberately reset (cannot assert mastery from an unverified JSON file); the learner must retake the local knowledge check. Original export remains unchanged. No data sent to servers.
+- Added standardized printable optional-game/project evidence page area (learner, reflection lines, caregiver/date) to each classroom. Actual interactive project screenshots are **not** embedded; hand-written reflection space is provided instead.
+- Re-fetched all 12 files and checked import markup, game-evidence print markup, and JavaScript syntax: 12/12 PASS.
+- Open certification: live browser import testing, print layout, 255px responsiveness, offline storage and keyboard/screen-reader QA; verify Pages deployment for this final commit. Imported record trust (quiz deliberately reset) should be communicated to families.
