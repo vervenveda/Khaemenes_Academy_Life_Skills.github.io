@@ -164,3 +164,12 @@ Updated: 2026-10-20 · Branch: main
 - Added equivalent subject-specific instructional depth to Emergency Readiness & Resilience Weeks 01–03 (15 lessons), emphasizing no real hazard exposure, location-specific caregiver emergency guidance, calm communication, help-seeking, accessible picture practice and private household details.
 - Re-fetched all three Emergency weekly files after main commits: five lesson/depth blocks, 15 quiz items, portfolio restore and note printing retained, scripts parsed without errors.
 - Remaining depth review: Culinary Independence. Source checks do not certify browser/255px/offline/printing behavior, which remains outstanding.
+
+## Reaudit of eight Kindergarten subjects — 2026-10-21
+- Re-read all 24 weekly classroom pages. Every page had five daily lesson sections, 15 structurally valid unique question prompts, and JavaScript that parsed without syntax errors. No browser functional certification implied.
+- Depth status changed since earlier tracker: 7 of 8 built subjects now have 5 teaching-depth blocks per weekly page (105 expanded lessons); Culinary Independence has 0 and is the remaining depth outlier.
+- **Bubble 1 REPAIRED**: Culinary JSON import used slug `culinary-independence` to compute localStorage key, while the actual classroom engine stores under `khae.life.culinary.kindergarten.weekNN.v1.`; corrected all three weekly import modules to use the canonical `culinary` key. Re-fetched syntax validation performed before commits. Actual browser restore remains pending.
+- Bubble 2: Existing generic JSON import intentionally clears quiz attempts, so caregiver-approved learner records cannot unlock subsequent weeks until quizzes are retaken; clarify this prominently and test round-trip behavior on real browsers, including restoration of safely verifiable attempts if feasible.
+- Bubble 3: Culinary lessons lack the four-part example/guided/independent/caregiver depth blocks added to all seven other courses. Enrich its 15 lessons while preserving mature games and assessment logic.
+- Bubble 4: Interactions are uneven across subjects; test click, keyboard, labeling and accessible feedback, and gradually replace subject-inappropriate copied mini-games. Validate at 255px and with actual device/browser.
+- Bubble 5: End-to-end deployed page certification remains open: printouts, cross-week mastery, genuine JSON export/import, offline reload, GitHub Pages build completion and current deployed commit. Do not equate source compilation or Pages green status with a fully tested child experience.
