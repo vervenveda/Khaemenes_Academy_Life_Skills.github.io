@@ -79,3 +79,11 @@ Updated: 2026-10-20 · Branch: main
 - Subject progression: healthy hygiene/rest/food/movement; feelings and trusted helpers, safe injury response and local emergency awareness; wellness project with boundaries, safe adult support and reflection. These are learning activities, never medical or first-aid certification.
 - Verified five lessons and 15 question prompts each; Week 02 and 03 validators accept synthetic eligible records and reject records missing caregiver review. All three newly added scripts parse. Import/print and 255px real browser acceptance still pending.
 - Deployment at pass start: latest previous portfolio commit `7c51bdbc` had GitHub Pages workflow in progress; new commits require their own deployment verification.
+
+## Sixth pathway — Kindergarten Personal Finance (2026-10-20)
+- Five-subject consistency audit: 15 existing weekly HTML classrooms checked for five lesson sections, 15 question records, source-valid JavaScript, note printing and matching JSON restore UI: 15/15 passed source checks.
+- Created Personal Finance hub and Weeks 01–03: 15 lessons, separate weekly banks of 15 questions, paper-token counting activities, printable evidence, progress/assessment storage, caregiver review, autosave, JSON export/import.
+- Week 01 needs/wants, pretend coins, counting, budget and pretend shop; Week 02 paper-token savings, addition/subtraction, choices, sharing and goal plans; Week 03 mock market, budget checks, accessible signage, revision and showcase. No real transactions or disclosure of financial information.
+- Synthetic eligible Week 01->02 and Week 02->03 records passed actual prerequisite functions; missing caregiver review denied. Distinct personal-finance storage namespaces verified. Games/portfolio full browser and small-screen acceptance remains pending.
+- Latest deployment sampled when audit began: `5afc6ef0` GitHub Pages workflow in progress; verify new Personal Finance commits separately before declaring deployed.
+- QA debt: Personal Finance quiz distractors are generic placeholders and need a stronger pedagogical pass; existing HTML import records always reset quiz history as designed.
