@@ -50,8 +50,27 @@ for week in range(1,37):
         checks["quiz_bank_parse"]=False
         print(f"Week {week} quiz bank error: {exc}",file=sys.stderr)
     results.append({"week":week,"checks":checks})
+# Year 1 forensic regression contracts: directory coverage and final academic/practical boundary.
+portal=(root/"index.html").read_text(encoding="utf-8")
+links=re.findall(r'href="\\./week-(\\d{2})/"',portal)
+directory_checks={
+    "every_week_linked":all(f"{w:02d}" in links for w in range(1,37)),
+    "no_duplicate_week_links":len(links)==len(set(links)),
+    "nine_unit_directory":all(f"Unit {u:02d}" in portal for u in range(1,10)),
+    "no_grade_four_preview":"Fourth Grade Family Project Preview" not in portal,
+    "no_early_years_games":"Mini Kitchen Discovery Games" not in portal,
+}
+final=(root/"week-36"/"index.html").read_text(encoding="utf-8")
+final_checks={
+    "final_rubric_title":"Year 1 Final Academic Evidence Rubric" in final,
+    "final_unit_metadata":"CULA 101 · Unit 09 · Week 36" in final,
+    "practical_status_separate":"Reviewer practical status:" in final and "No automatic practical pass" in final,
+    "no_old_unit_one_rubric":"Unit 01 Professional Readiness Rubric" not in final,
+}
+results.append({"week":"portal","checks":directory_checks})
+results.append({"week":"year_one_final","checks":final_checks})
 print(json.dumps(results,indent=2))
 fail=[(r["week"],k) for r in results for k,v in r["checks"].items() if not v]
 for w,k in fail:print(f"FAIL Week {w}: {k}",file=sys.stderr)
-print(f"CULA 101 Culinary source audit: {len(results)} weeks, {len(fail)} failed checks",file=sys.stderr)
+print(f"CULA 101 Culinary source audit: 36 weeks plus portal and final checks, {len(fail)} failed checks",file=sys.stderr)
 sys.exit(bool(fail))
