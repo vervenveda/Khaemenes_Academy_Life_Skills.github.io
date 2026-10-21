@@ -158,3 +158,9 @@ Updated: 2026-10-20 · Branch: main
 - Reinforced that local recycling rules differ, hazardous waste is adult-only, and family resources and individual abilities should never be judged.
 - Re-fetched three weekly files: five enriched lessons and 15-item question banks each, preserved token games, JSON recovery and print evidence; embedded JavaScript parses successfully.
 - Curriculum-depth pass now covers 6 of 8 built subjects / 90 of 120 lessons. Culinary Independence and Emergency Readiness remain to review; runtime 255px, offline, print and accessibility QA not certified.
+
+## Curriculum depth follow-up — Sustainability verified and Emergency Readiness enriched
+- Sustainability & Stewardship already had all 15 lessons expanded to model examples, caregiver-guided practice, independent picture challenges and caregiver notes when this pass started. Re-fetched Weeks 01–03: five depth blocks, five lessons and 15 quiz questions per week, with valid source JavaScript. No duplicate edits made.
+- Added equivalent subject-specific instructional depth to Emergency Readiness & Resilience Weeks 01–03 (15 lessons), emphasizing no real hazard exposure, location-specific caregiver emergency guidance, calm communication, help-seeking, accessible picture practice and private household details.
+- Re-fetched all three Emergency weekly files after main commits: five lesson/depth blocks, 15 quiz items, portfolio restore and note printing retained, scripts parsed without errors.
+- Remaining depth review: Culinary Independence. Source checks do not certify browser/255px/offline/printing behavior, which remains outstanding.
