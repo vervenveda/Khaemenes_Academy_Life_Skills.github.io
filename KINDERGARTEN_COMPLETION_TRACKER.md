@@ -87,3 +87,9 @@ Updated: 2026-10-20 · Branch: main
 - Synthetic eligible Week 01->02 and Week 02->03 records passed actual prerequisite functions; missing caregiver review denied. Distinct personal-finance storage namespaces verified. Games/portfolio full browser and small-screen acceptance remains pending.
 - Latest deployment sampled when audit began: `5afc6ef0` GitHub Pages workflow in progress; verify new Personal Finance commits separately before declaring deployed.
 - QA debt: Personal Finance quiz distractors are generic placeholders and need a stronger pedagogical pass; existing HTML import records always reset quiz history as designed.
+
+## Seventh subject — Sustainability & Stewardship
+- Hardened all 45 Personal Finance quiz questions with subject-specific alternative answers and updated associated predecessor banks; preserves correct answers, learner storage and assessment thresholds.
+- Built original Kindergarten Sustainability hub and Week 01–03 learning pages (15 lessons, 45 questions) covering water/reuse/sorting, nature/resource observations and a final planet-care picture project. Grade gateway links to new hub and keeps optional Preschool review.
+- Caught and repaired initially flat quiz-choice array shape in all three Sustainability weekly pages before signoff. Re-fetched code now has 15 nested three-choice questions per week, valid JS, five lessons each. Week 02 and 03 gates accept synthetic passing records and reject missing caregiver review. Existing portfolio restore and print tools retained.
+- Still pending: actual browser, print, assistive technology, offline and 255px testing; latest deployment of these specific commits not verified.
