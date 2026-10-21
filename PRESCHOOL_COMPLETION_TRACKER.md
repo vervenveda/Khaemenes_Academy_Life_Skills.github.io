@@ -180,3 +180,20 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Replaced generic original question wording with new 15-question banks per week, BUT the banks still use repetitive safety-picture question patterns and need meaningful distinct topic-based item writing before curriculum/assessment approval.
 - Week 02 and Week 03 checks recognize prior legacy questions plus revised predecessor question responses; localStorage namespaces unchanged. Six weekly scripts parsed; each has five lessons, fifteen questions and five print-evidence fields.
 - Remaining: differentiated questions, live browser/offline/255px/print/accessibility and educator acceptance. Source coverage is not production certification.
+
+## 2026-10-20 Cross-course Preschool audit — 16-subject structure
+### Verified scope
+- Preschool directory source contains 16 distinct course links (16/16).
+- Reviewed 48 weekly HTML files across 16 subjects; all were fetchable from GitHub. For 42 files, matched a recognizable 15-question modern `bank` source schema or a 10-question Home Management schema. Culinary and Home Week 01 use different `questions` / `quizBank` schemas and MUST NOT be classified as missing assessments from a modern `bank` regex.
+- Newer courses from Sustainability through Legal Consumer have all 5 lesson articles per weekly file and 15-question bank payloads. Home Weeks 02/03 have 10-item banks; 10 does not automatically mean faulty because quiz format differs. A true performance audit must examine how many items are selected and their scoring.
+- Earlier courses (Gardening, Creativity, Health, Finance, Sustainability, Emergency; Home weeks 02/03) have no `print-evidence` blocks per lesson, while the eight newer reworked subjects (Transportation through Legal) do. This is a *template-standard gap*, not proof those earlier files are unprintable.
+- Caregiving and Legal & Consumer Literacy each still have 15 formulaic day-number/safety-template questions per week (90 generic questions total); they need distinct lesson-specific scenario banks.
+- Week 2/3 prior-record key names for the newer courses were manually checked in prior repair rounds; this cross-course audit did NOT run user journeys in a browser or verify credential authenticity.
+
+### Three highest-value next fixes
+1. **Assessment compatibility and genuine mastery (P0):** Create a format-aware validation matrix for all 16 courses' actual question formats (legacy Culinary `questions`, Home `quizBank` / numbered bank, newer object-free banks) and test passing/failing scores, changed question banks, local record corruption and caregiver evidence. Do not migrate keys without tested compatibility.
+2. **Printable evidence in earlier courses (P1):** Add explicit Khaemenes Academy, course, Preschool, week/unit/day, student/date/caregiver identification to each printable day in courses without embedded `print-evidence` fields. Verify CSS print media and page counts in a browser before certification.
+3. **Depth, assessment validity and release QA (P0/P1):** Rewrite the 90 templated questions in Caregiving and Legal Consumer into distinct, domain-specific scenario items. Run 255px/mobile, offline, keyboard/screen-reader, focus/dialog, storage recovery, and teacher content/safety reviews across every course. Source-level syntax checks alone do not establish acceptance.
+
+### Status
+Structural coverage recorded as 240/240 lesson sections, **not** 240 independently teacher-approved lessons. Cross-course production/qualification certification is withheld until end-to-end QA and adult practical observations are validated.
