@@ -197,3 +197,8 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 
 ### Status
 Structural coverage recorded as 240/240 lesson sections, **not** 240 independently teacher-approved lessons. Cross-course production/qualification certification is withheld until end-to-end QA and adult practical observations are validated.
+
+## 2026-10-20 Mastery Bubble 01 — regression foundation
+- Inspected actual code for Culinary Weeks 01–03, Home Management Weeks 01–03, and Gardening Weeks 01–03. Culinary uses an indexed correct-answer/choices format in Week 01 and historical format-aware progression; Home Management Weeks 02–03 have 10-question banks and validate 5 randomized answered items with exact score and caregiver review. Gardening uses answer-string prompt sets. These implementations cannot safely be replaced with one generic quiz parser.
+- Added `qa/preschool-mastery-regression.js`, a dependency-free regression fixture suite covering 14 passing/failing mastery-record scenarios, including 80/100 percent, under-80, missing review/practice/adult name, duplicate or unknown questions, forged score, invalid answer and old/new bank compatibility. Re-fetched the committed file and executed its 14 checks in a JavaScript runtime: PASS.
+- These regression fixtures model the record validation requirements, NOT actual browser-level cross-week behavior or each course's exact production validator. No course storage keys, learner records or gating behavior were modified in this pass. Next: adapt direct course-specific tests, then carefully integrate fixes found by those tests.
