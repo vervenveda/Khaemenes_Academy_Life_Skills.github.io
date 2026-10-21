@@ -134,3 +134,52 @@ test('Grade 5 evidence stays separated between learner codes',async({page})=>{
   await expect(page.locator('#note0')).toHaveValue('');
 });
 
+
+test('Grade 5 symposium rubric is printable and saves learner-specific assessment',async({page})=>{
+  const code='grade5-symposium-rubric';
+  await passWeek(page,1,code);
+  await passWeek(page,2,code);
+  await page.goto(weekUrl(3));
+  await openLearner(page,code);
+  await expect(page.locator('.rubric')).toContainText('Decimal budgeting and unit-price reasoning');
+  await expect(page.locator('.rubric')).toContainText('Nutrition-label interpretation and recipe clarity');
+  await page.locator('#rubric-score2').selectOption('3');
+  await page.locator('#rubric-note2').fill('Caregiver verified cost per serving and asked for a second unit-price comparison.');
+  await page.locator('#rubric-summary').fill('Explain the decimal calculations and show one improvement.');
+  await page.reload();
+  await openLearner(page,code);
+  await expect(page.locator('#rubric-score2')).toHaveValue('3');
+  await expect(page.locator('#rubric-note2')).toHaveValue(/second unit-price comparison/);
+  const saved=await page.evaluate(code=>JSON.parse(localStorage.getItem('khae-culinary-grade5-week03-'+code)),code);
+  expect(saved.rubric.scores[2]).toBe('3');
+  expect(saved.rubric.summary).toContain('decimal calculations');
+  await page.emulateMedia({media:'print'});
+  await expect(page.locator('.rubric')).toBeVisible();
+});
+test('Grade 5 symposium rubric export restore preserves scores but resets quiz mastery',async({page})=>{
+  const code='grade5-rubric-restore';
+  await passWeek(page,1,code);
+  await passWeek(page,2,code);
+  await passWeek(page,3,code);
+  await page.locator('#rubric-score0').selectOption('4');
+  await page.locator('#rubric-note0').fill('Caregiver verified inclusive alternatives and documented safe food handling.');
+  const record=await page.evaluate(code=>JSON.parse(localStorage.getItem('khae-culinary-grade5-week03-'+code)),code);
+  const exported=JSON.stringify({course:'Grade 5 Culinary Arts Week 03',learnerCode:code,record});
+  await page.locator('#rubric-score0').selectOption('');
+  await page.locator('#restore-file').setInputFiles({name:'grade5-evidence.json',mimeType:'application/json',buffer:Buffer.from(exported)});
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('PREVIEW');
+  await expect(page.locator('#rubric-score0')).toHaveValue('');
+  page.on('dialog',dialog=>dialog.accept());
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('Portfolio restored');
+  await expect(page.locator('#rubric-score0')).toHaveValue('4');
+  await expect(page.locator('#progress')).not.toContainText('Mastery earned!');
+  const restored=await page.evaluate(code=>JSON.parse(localStorage.getItem('khae-culinary-grade5-week03-'+code)),code);
+  expect(restored.attempts).toEqual([]);
+  const wrong=JSON.stringify({course:'Grade 5 Culinary Arts Week 03',learnerCode:'another-learner',record});
+  await page.locator('#restore-file').setInputFiles({name:'wrong-learner.json',mimeType:'application/json',buffer:Buffer.from(wrong)});
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('Wrong learner or course');
+  await expect(page.locator('#rubric-score0')).toHaveValue('4');
+});
