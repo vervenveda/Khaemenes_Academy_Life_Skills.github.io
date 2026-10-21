@@ -58,3 +58,11 @@ Updated: 2026-10-20 · Branch: main
 - **Bubble 3 (source tests passed, browser pending):** Ran 40 direct-source regression assertions covering valid prior results, missing caregiver approval, corrupted learner JSON, correct predecessor week and distinct week record namespaces across all eight Weeks 02/03 from four Kindergarten courses. All assertions passed; no real-browser journeys performed.
 - **Bubble 4 (open):** Games and small-screen/keyboard interactions still lack hands-on browser acceptance. Validate all 12 Kindergarten weekly pages, especially 255px layout, focus, quiz radio groups, offline behavior, game feedback and print pop-ups.
 - **Bubble 5 (open):** Printed learner evidence, JSON export/import portability and deployment-to-live URL content have not been verified end to end; perform rendered/PDF checks and confirm live pages after current main deployment completes. Existing export-only workflows must not be called cross-device import features.
+
+## 2026-10-20 Kindergarten functional/accessibility hardening pass
+- Scope: all 12 weekly HTML classrooms across Culinary, Home Management, Gardening and Creativity on main.
+- **Repaired:** printable learner text was omitted because textareas were hidden by print CSS. Added print-only synchronized learner-note evidence under each daily lesson, preserving blank writable lines when empty.
+- **Repaired:** lesson checkboxes, learner note changes, caregiver-name changes and approval changes now initiate local save in all 12 files (explicit Save remains available). Print triggers a final note sync.
+- **Source validation:** all 12 upgraded HTML files re-fetched; each contains print evidence extension and JS parsed without syntax errors.
+- **Still open:** actual live deployed browser keyboard/screen-reader inspection, 255px horizontal overflow testing, popup-print accessibility, offline behavior and full end-to-end progression/portfolio QA. The environment could not connect to live vervenveda.com during this pass; no visual/browser success claimed.
+- **Potential follow-up:** consider replacing popup-based recipe printing with an integrated printable project area, and add device-level export/import and full browser regression tests.
