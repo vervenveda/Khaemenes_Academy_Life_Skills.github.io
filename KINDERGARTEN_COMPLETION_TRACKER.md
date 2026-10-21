@@ -144,3 +144,10 @@ Updated: 2026-10-20 · Branch: main
 - No unsupervised treatment, touching real injuries/blood, medicines or emergency-response certification; private contacts and health details must not appear on public work.
 - Re-fetched all three committed weekly pages: 5 lessons and 5 teaching-depth blocks per page, 15 original assessment questions, retained JSON recovery and printed learner-note functionality, zero JS parsing errors. No changes to mastery/record schemas.
 - Browser, print, keyboard, 255px and offline end-to-end certification remain pending.
+
+## Halfway-audit Bubble 2 — Personal Finance curriculum depth
+- Enriched all 15 Kindergarten Personal Finance lessons (Weeks 01–03) with distinct examples, guided pretend-token activities, independent illustrated challenges, and caregiver notes; lesson progression covers money as a concept, needs/wants, simple counting, budgets, saving, sharing with consent, mock mini-markets, fairness and final portfolios.
+- Lessons protect family financial privacy, avoid actual transactions and distinguish pretend tokens from real currencies; learning is inclusive of differing economic circumstances and accessibility needs.
+- Re-fetched all three changed weekly pages: five lesson and five teaching-depth blocks per week, unchanged 15-item assessment banks per week, existing token game, JSON restore and printable learner evidence preserved; all embedded JS passes parsing.
+- Five of eight currently built Kindergarten subject courses now have expanded lesson depth (Home Management, Gardening, Creativity, Health and Personal Finance); Culinary, Sustainability and Emergency remain for unified depth review.
+- Browser/255px/offline/print end-to-end QA and deployment confirmation for current main remain pending.
