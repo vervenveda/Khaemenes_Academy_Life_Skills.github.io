@@ -70,3 +70,42 @@ test('real browser: incomplete quiz never awards mastery',async({page})=>{
   await expect(page.locator('#result')).toContainText('Answer all five');
   await expect(page.locator('#progress')).not.toContainText('Mastery earned!');
 });
+
+
+test('real browser: portfolio restore previews, protects identity and resets quiz mastery',async({page})=>{
+  const code='culinary-restore-a';
+  await passWeek(page,1,code);
+  const exported=await page.evaluate(code=>{
+    const record=JSON.parse(localStorage.getItem('khae-culinary-grade1-week01-'+code));
+    return JSON.stringify({course:'Grade 1 Culinary Arts Week 01',learnerCode:code,record});
+  },code);
+  await page.locator('#done0').uncheck();
+  await expect(page.locator('#done0')).not.toBeChecked();
+  await page.locator('#restore-file').setInputFiles({name:'portfolio.json',mimeType:'application/json',buffer:Buffer.from(exported)});
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('PREVIEW');
+  await expect(page.locator('#done0')).not.toBeChecked();
+  page.on('dialog',dialog=>dialog.accept());
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('Portfolio restored');
+  await expect(page.locator('#done0')).toBeChecked();
+  await expect(page.locator('#progress')).not.toContainText('Mastery earned!');
+  const wrong=JSON.stringify({course:'Grade 1 Culinary Arts Week 01',learnerCode:'another-learner',record:JSON.parse(exported).record});
+  await page.locator('#restore-file').setInputFiles({name:'wrong.json',mimeType:'application/json',buffer:Buffer.from(wrong)});
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('Wrong learner or course');
+  await expect(page.locator('#done0')).toBeChecked();
+});
+test('real browser: printable academic evidence contains learner and week metadata',async({page})=>{
+  await page.goto(weekUrl(1));
+  await openLearner(page,'culinary-print-a');
+  await page.locator('#note0').fill('Observed safe counting and explained the plan.');
+  await page.emulateMedia({media:'print'});
+  await expect(page.locator('#print-head')).toBeVisible();
+  await expect(page.locator('#print-head')).toContainText('Khaemenes Academy');
+  await expect(page.locator('#print-head')).toContainText('Grade 1');
+  await expect(page.locator('#print-head')).toContainText('Week 01');
+  await expect(page.locator('#print-learner')).toContainText('culinary-print-a');
+  await expect(page.locator('#quiz')).toBeHidden();
+  await expect(page.locator('#note0')).toHaveValue('Observed safe counting and explained the plan.');
+});
