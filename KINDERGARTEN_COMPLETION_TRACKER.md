@@ -36,3 +36,10 @@ Updated: 2026-10-20 · Branch: main
 - Created Kindergarten Home Management subject hub and 3 independent weekly classrooms (15 original daily lessons, 45 topic-specific bank questions, optional safe-home helper mini-game, separate Kindergarten home-management localStorage namespaces, caregiver review, printable evidence and JSON export).
 - Repaired Week 03 priorPrefix to read Week 02 (not itself) and corrected week-specific page titles. Verified Week 02 and Week 03 actual prerequisite function with synthetic valid and missing-review records: valid PASS and missing-review DENIED. Retained five-question / 80% score behavior.
 - Updated Kindergarten gateway Home Management card to open course hub and retain optional Preschool review. Source-level checks passed; interactive browser, accessibility, printed evidence and 255px QA pending.
+
+## 2026-10-20 Kindergarten Gardening & Food Growing — third pathway
+- Created original Kindergarten Gardening hub and three weekly pages, with 15 daily lessons, 45 subject-specific question prompts across three 15-item randomized banks, five-question/80% grading, caregiver review, separate Kindergarten Gardening localStorage keys, JSON export and print evidence.
+- Curriculum progression: W01 seeds/plant parts/light/water/counting/picture garden; W02 five-day observations/light/shade/water decisions/animals/garden map; W03 safe planning/counting/calendar/revision/showcase. Includes simple optional picture-count and garden safety-choice interactions (not formal mastery).
+- Linked Kindergarten grade gateway course card, leaving Preschool foundational review clearly optional.
+- Fixed initial Week 03 self-prerequisite reference; actual Week 02/03 gate functions subsequently checked against synthetic passed, forged-score and missing-caregiver-review records; all test expectations held. Re-fetched weekly files, confirmed 5 daily sections and 15 unique question prompts each with JavaScript syntax passes.
+- Interactive browser, offline, 255px device, screen-reader, exported JSON and print-layout acceptance remain open. No claim of production certification.
