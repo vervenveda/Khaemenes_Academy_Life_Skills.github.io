@@ -6,6 +6,7 @@ on:
     paths:
       - 'courses/culinary-independence/elementary/grade-1/**'
       - 'tools/audit_grade1_culinary.py'
+      - 'tools/test_grade1_culinary_browser.spec.cjs'
       - '.github/workflows/grade1-culinary-audit.yml'
 jobs:
   inspect:
@@ -33,6 +34,14 @@ jobs:
                   subprocess.run(["node","--check",str(p)],check=True)
                   print(f"PASS {page} script {n+1}")
           PY
+      - name: Install isolated browser test runner
+        run: |
+          npm install --no-save --no-package-lock @playwright/test@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Browser-test three-week learner journey
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/grade1-culinary-http.log 2>&1 &
+          npx playwright test tools/test_grade1_culinary_browser.spec.cjs --browser chromium --workers 1 --reporter line
       - name: Upload audit evidence
         if: always()
         uses: actions/upload-artifact@v4
