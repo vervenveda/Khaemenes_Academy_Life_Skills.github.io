@@ -223,3 +223,10 @@ Structural coverage recorded as 240/240 lesson sections, **not** 240 independent
 - Replaced 90 day-number/template-driven prompts with 90 distinct question prompts across Caregiving & Family Responsibilities and Legal & Consumer Literacy (15 each in 6 weekly banks). Questions target the actual daily curriculum: permission, safe caregiving roles, boundaries, accessibility, age-safe tasks, needs, rights/fairness, ads, price comparisons, privacy, receipts, caregiver help and final projects.
 - Week 02 and 03 in each subject now accept three valid prior-week assessment versions: original legacy, intermediate generic 2026 revision, and current lesson-specific quiz. Existing localStorage namespaces and randomized 5-question 80% mechanism unchanged.
 - Re-fetched all six files: each has 15 distinct question prompts, five print-identification sections, and parsable JS. This is source-level verification; learner browser journeys, rendered print and educator review remain outstanding.
+
+## 2026-10-20 Source certification sweep — all 16 Preschool subjects
+- Re-fetched each of the 48 weekly lesson HTML files from GitHub across all 16 course directories.
+- All 48 have exactly five `<article class="day">` sections; all 48 have five `print-id` or `print-evidence` identification blocks; JavaScript embedded in all 48 parses successfully in an isolated JS syntax check.
+- All 32 Week 02/03 pages expose a previous-week guard (`priorPrefix` or legacy `previousReady`/`previousWeekReady`). This verifies guard presence, NOT correct end-to-end learner behavior.
+- Legacy Culinary and Home banks differ in schema from 15-item bank courses; the prior 23 direct-source regression fixtures checked Culinary/Home prerequisite behavior independently, but have not been extended to all 16 courses.
+- Source certification PASS for structure, print-identification presence, JS syntax and guard presence only. Browser interactive tests, localStorage corruption/recovery, responsive 255px layouts, real print/PDF output, keyboard/screen-reader, offline and pedagogical/subject-matter review remain OPEN; not release-certified.
