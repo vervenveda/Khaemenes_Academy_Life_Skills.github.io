@@ -173,3 +173,10 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Week 02 and 03 prerequisite answer maps now accept correctly scored legacy and revised prior-week attempts; preserved learner localStorage namespaces.
 - Added five printable Academy/student/date/caregiver identification headings to Week 01 and corrected inherited safety-course subtitles across all three weeks.
 - Source-level syntax and structural checks performed; browser, 255px screen, accessibility, offline, printing and educator acceptance remain unverified.
+
+## 2026-10-20 Caregiving and Legal Consumer Preschool reading pass
+- Revised all 15 daily lesson readings and guided activities in Caregiving & Family Responsibilities and all 15 in Legal & Consumer Literacy. Safety guidance emphasizes children are not responsible for adult care, medical duties, purchases, legal decisions or hazardous work.
+- Corrected inherited week subtitles and added five Academy/student/date/caregiver print headers to each Week 01; all six weekly files contain five per-lesson print headers.
+- Replaced generic original question wording with new 15-question banks per week, BUT the banks still use repetitive safety-picture question patterns and need meaningful distinct topic-based item writing before curriculum/assessment approval.
+- Week 02 and Week 03 checks recognize prior legacy questions plus revised predecessor question responses; localStorage namespaces unchanged. Six weekly scripts parsed; each has five lessons, fifteen questions and five print-evidence fields.
+- Remaining: differentiated questions, live browser/offline/255px/print/accessibility and educator acceptance. Source coverage is not production certification.
