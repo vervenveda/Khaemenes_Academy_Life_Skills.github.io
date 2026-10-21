@@ -7,6 +7,7 @@ on:
       - 'courses/kindergarten/**'
       - 'tools/audit_kindergarten.py'
       - 'tools/audit_kindergarten_import_identity.py'
+      - 'tools/audit_kindergarten_learner_journey.py'
       - '.github/workflows/kindergarten-source-audit.yml'
 jobs:
   inspect:
@@ -22,6 +23,8 @@ jobs:
         run: python3 tools/audit_kindergarten.py > kindergarten-source-audit.json
       - name: Verify Kindergarten portfolio import identity protections
         run: python3 tools/audit_kindergarten_import_identity.py > kindergarten-import-identity-audit.json
+      - name: Verify learner-journey source contracts
+        run: python3 tools/audit_kindergarten_learner_journey.py > kindergarten-learner-journey-audit.json
       - name: Preserve audit evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -30,4 +33,5 @@ jobs:
           path: |
             kindergarten-source-audit.json
             kindergarten-import-identity-audit.json
+            kindergarten-learner-journey-audit.json
           if-no-files-found: warn
