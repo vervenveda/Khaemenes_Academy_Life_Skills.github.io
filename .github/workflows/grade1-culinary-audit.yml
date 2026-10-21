@@ -1,0 +1,42 @@
+name: Grade 1 Culinary source audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'courses/culinary-independence/elementary/grade-1/**'
+      - 'tools/audit_grade1_culinary.py'
+      - '.github/workflows/grade1-culinary-audit.yml'
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Grade 1 Culinary learner journey contracts
+        run: python3 tools/audit_grade1_culinary.py > grade1-culinary-source-audit.json
+      - name: Check classroom JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, subprocess
+          root=Path("courses/culinary-independence/elementary/grade-1")
+          for page in sorted(root.glob("week-*/index.html")):
+              scripts=re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>",page.read_text(),flags=re.S|re.I)
+              for n,script in enumerate(scripts):
+                  p=Path("/tmp/grade1-culinary-check.js")
+                  p.write_text(script)
+                  subprocess.run(["node","--check",str(p)],check=True)
+                  print(f"PASS {page} script {n+1}")
+          PY
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grade1-culinary-audit
+          path: grade1-culinary-source-audit.json
+          if-no-files-found: warn
