@@ -20,8 +20,7 @@ jobs:
           node-version: '22'
       - name: Inventory, link, identifier and JavaScript syntax checks
         run: python3 tools/audit_kindergarten.py > kindergarten-source-audit.json
-      - name: Inventory portfolio import identity protections (non-blocking until repaired)
-        continue-on-error: true
+      - name: Verify Kindergarten portfolio import identity protections
         run: python3 tools/audit_kindergarten_import_identity.py > kindergarten-import-identity-audit.json
       - name: Preserve audit evidence
         if: always()
