@@ -52,7 +52,7 @@ for week in range(1,37):
     results.append({"week":week,"checks":checks})
 # Year 1 forensic regression contracts: directory coverage and final academic/practical boundary.
 portal=(root/"index.html").read_text(encoding="utf-8")
-links=re.findall(r'href="\\./week-(\\d{2})/"',portal)
+links=re.findall(r'href="\./week-(\d{2})/"',portal)
 directory_checks={
     "every_week_linked":all(f"{w:02d}" in links for w in range(1,37)),
     "no_duplicate_week_links":len(links)==len(set(links)),
