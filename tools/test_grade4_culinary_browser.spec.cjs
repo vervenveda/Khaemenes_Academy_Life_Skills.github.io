@@ -122,3 +122,22 @@ test('Grade 4 exhibition requires five substantive written records',async({page}
   await page.locator('#note0').fill('I compared fraction models, calculated costs per serving, and documented a safer revised menu plan.');
   await expect(page.locator('#progress')).toContainText('Mastery earned!');
 });
+
+test('Grade 4 exhibition includes printable caregiver assessment criteria',async({page})=>{
+  await page.goto(weekUrl(3));
+  await expect(page.locator('.rubric')).toContainText('Fractions and scaling accuracy');
+  await expect(page.locator('.rubric')).toContainText('Budget and cost-per-serving reasoning');
+  await expect(page.locator('.rubric')).toContainText('Safety and allergen decisions');
+  await page.emulateMedia({media:'print'});
+  await expect(page.locator('.rubric')).toBeVisible();
+});
+test('Grade 4 evidence stays separated between learner codes',async({page})=>{
+  await page.goto(weekUrl(1));
+  await openLearner(page,'grade4-learner-one');
+  await page.locator('#note0').fill('Learner one recorded an original hazard assessment and a prevention strategy.');
+  await page.locator('#done0').check();
+  await page.reload();
+  await openLearner(page,'grade4-learner-two');
+  await expect(page.locator('#done0')).not.toBeChecked();
+  await expect(page.locator('#note0')).toHaveValue('');
+});
