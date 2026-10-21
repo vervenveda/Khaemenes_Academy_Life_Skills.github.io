@@ -124,7 +124,12 @@ test('Grade 4 exhibition requires five substantive written records',async({page}
 });
 
 test('Grade 4 exhibition includes printable caregiver assessment criteria',async({page})=>{
+  const code='grade4-print-rubric';
+  await passWeek(page,1,code);
+  await passWeek(page,2,code);
   await page.goto(weekUrl(3));
+  await openLearner(page,code);
+  await expect(page.locator('#work')).toBeVisible();
   await expect(page.locator('.rubric')).toContainText('Fractions and scaling accuracy');
   await expect(page.locator('.rubric')).toContainText('Budget and cost-per-serving reasoning');
   await expect(page.locator('.rubric')).toContainText('Safety and allergen decisions');
