@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static source contracts for the CULA 101 Culinary twenty-nine-week Units 01–08 journey."""
+"""Static source contracts for the CULA 101 Culinary thirty-two-week Units 01–08 journey."""
 from pathlib import Path
 import json
 import re
@@ -14,7 +14,7 @@ def extract_bank(source, name):
 
 results=[]
 previous_bank=None
-for week in range(1,30):
+for week in range(1,33):
     page=root/f"week-{week:02d}"/"index.html"
     if not page.exists():
         results.append({"week":week,"checks":{"page_exists":False}})
@@ -34,7 +34,7 @@ for week in range(1,30):
         "guarded_restore": 'restoreSignature' in s and 'incoming.learnerCode!==code' in s,
         "written_evidence_prompt": 'My evidence: calculations, comparison, safety reasoning and revisions' in s,
         "practice_evidence_confirmation": 'I completed this practice and recorded evidence' in s,
-        "twenty_nine_week_path": True,
+        "thirty_two_week_path": True,
         "mastery_garden": 'Mastery earned!' in s,
     }
     if week>1:
