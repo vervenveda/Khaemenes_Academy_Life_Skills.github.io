@@ -141,3 +141,25 @@ test('Grade 4 evidence stays separated between learner codes',async({page})=>{
   await expect(page.locator('#done0')).not.toBeChecked();
   await expect(page.locator('#note0')).toHaveValue('');
 });
+
+test('Grade 4 caregiver rubric persists, exports and isolates records',async({page})=>{
+  const code='grade4-rubric-one';
+  await passWeek(page,1,code);
+  await passWeek(page,2,code);
+  await page.goto(weekUrl(3));
+  await openLearner(page,code);
+  await page.locator('#rubric-score0').selectOption('3');
+  await page.locator('#rubric-note0').fill('Caregiver observed an accurate allergen hazard assessment and a clear safety revision.');
+  await page.locator('#rubric-summary').fill('Next step: verify the serving math and explain the cost per person.');
+  await expect(page.locator('#rubric-status')).toContainText('1/5 criteria scored');
+  await page.reload();
+  await openLearner(page,code);
+  await expect(page.locator('#rubric-score0')).toHaveValue('3');
+  await expect(page.locator('#rubric-note0')).toHaveValue(/accurate allergen hazard assessment/);
+  const saved=await page.evaluate(code=>JSON.parse(localStorage.getItem('khae-culinary-grade4-week03-'+code)),code);
+  expect(saved.rubric.scores[0]).toBe('3');
+  expect(saved.rubric.summary).toContain('cost per person');
+  await page.goto(weekUrl(1));
+  await openLearner(page,'grade4-rubric-two');
+  await expect(page.locator('#note0')).toHaveValue('');
+});
