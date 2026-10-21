@@ -151,3 +151,10 @@ Updated: 2026-10-20 · Branch: main
 - Re-fetched all three changed weekly pages: five lesson and five teaching-depth blocks per week, unchanged 15-item assessment banks per week, existing token game, JSON restore and printable learner evidence preserved; all embedded JS passes parsing.
 - Five of eight currently built Kindergarten subject courses now have expanded lesson depth (Home Management, Gardening, Creativity, Health and Personal Finance); Culinary, Sustainability and Emergency remain for unified depth review.
 - Browser/255px/offline/print end-to-end QA and deployment confirmation for current main remain pending.
+
+## Halfway-audit Bubble 2 — Sustainability & Stewardship lesson depth
+- Expanded all 15 Sustainability lessons in Weeks 01–03 with specific examples, guided learning, independent paper-based challenges and caregiver teaching notes.
+- New activities cover safe reuse, water conservation, picture-only material sorting, community care, weather observation, waste-conscious making, habitat needs, adult-only repairs, accessible signage, counting resources, feedback and a portfolio showcase.
+- Reinforced that local recycling rules differ, hazardous waste is adult-only, and family resources and individual abilities should never be judged.
+- Re-fetched three weekly files: five enriched lessons and 15-item question banks each, preserved token games, JSON recovery and print evidence; embedded JavaScript parses successfully.
+- Curriculum-depth pass now covers 6 of 8 built subjects / 90 of 120 lessons. Culinary Independence and Emergency Readiness remain to review; runtime 255px, offline, print and accessibility QA not certified.
