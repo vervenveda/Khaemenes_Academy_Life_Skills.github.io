@@ -160,3 +160,9 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Replaced each week's 15-item generic question pool with distinct subject-specific questions (30 revised questions total); 80% randomized five-question structure retained.
 - Week 03 prior-week gate accepts either 15 legacy Week 02 prompts or 15 revised Week 02 prompts for correctly scored local records. Storage namespaces remain unchanged.
 - Verified source JavaScript parsing, 5 lesson sections, 15 questions, 5 print-identification elements per week, and prior namespace through GitHub reads. Actual browser/255px/offline/print and educator QA remain open.
+
+## 2026-10-20 Entrepreneurship & Small Business Preschool deepening
+- Rewrote Days 1–15 across three weeks: helpful ideas, needs/wants, safe pretend products and services, pictorial pitches, signs, safe materials, listening to customer preferences, counting pretend prices, teamwork and a supervised picture-project capstone.
+- Replaced three generic 15-question assessment banks with 45 original domain-related questions. The existing randomized five-question, >=80% mechanism remains; valid older quiz attempts remain recognized in the Week 02/03 predecessor checks through compatibility answer maps. Learner localStorage keys unchanged.
+- Corrected inherited Emergency Readiness week subtitles and added five printable Academy/student/date/caregiver evidence headers to Week 01. Weeks 02 and 03 already had five each.
+- Source re-fetch and JavaScript syntax checks were performed, not browser/255px/offline/print/teacher acceptance testing. The program is not release-certified.
