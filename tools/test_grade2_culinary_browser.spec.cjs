@@ -22,7 +22,7 @@ async function passWeek(page, week, code) {
   await expect(page.locator('#work')).toBeVisible();
   for (let i=0;i<5;i++) {
     await page.locator('#done'+i).check();
-    await page.locator('#note'+i).fill('Evidence for day '+(i+1)+': explained my safe plan.');
+    await page.locator('#note'+i).fill('Evidence for day '+(i+1)+': I compared measurements, explained safe choices, and recorded a meaningful revision.');
   }
   const answers = answersFor(week);
   const items = page.locator('#quiz fieldset');
