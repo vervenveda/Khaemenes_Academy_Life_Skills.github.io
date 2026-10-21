@@ -125,3 +125,8 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Replaced 15 generic questions per week with topic-specific assessments (30 questions total) and retained 80% scoring; the source passed JavaScript parsing.
 - Week 03 predecessor checking now recognizes both newly revised Week 02 questions and previously saved valid legacy Week 02 responses, without changing existing localStorage keys.
 - Manual browser, actual print preview, 255px, accessibility, teaching accuracy and learner switching tests remain outstanding.
+
+## 2026-10-20 Re-audit: three next hardening priorities
+- Confirmed Transportation Weeks 01–03 each have 5 lessons, 15 unique question prompts, and five print evidence headings. Corrected inherited Week 02 and Week 03 header subtitles.
+- Found Digital Literacy Week 01 still had an inherited Emergency Readiness subtitle and no daily printed evidence identification; corrected both and preserved its assessment question bank and localStorage key.
+- Three prioritized remaining hardening bubbles: (1) domain-authentic, varied assessment quality and lesson depth in eight recent course scaffolds, with old-score compatibility; (2) consistent printed course/grade/unit/lesson/student/date/caregiver identification across all 48 weekly files and actual PDF/print page verification; (3) browser end-to-end progression, offline/shared-device recovery, 255px viewport, accessibility and independent educator signoff. Source inspection alone does not certify production readiness.
