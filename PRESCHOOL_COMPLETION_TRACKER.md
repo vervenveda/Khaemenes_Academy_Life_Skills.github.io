@@ -148,3 +148,9 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Replaced all three 15-item generic question banks with subject-specific questions (45 prompts total), preserving the five-random-question and >=80% scoring mechanism. Fixed inherited Week 02–03 safety course titles.
 - Week 02 and Week 03 prior-week evidence checks now recognize both legacy valid answers and revised question records without renaming learner localStorage namespaces.
 - JavaScript source syntax checks passed on updated pages. Full browser, quiz replay, screen-reader, offline, 255px and print rendering tests still outstanding. Source is NOT accepted as production-certified.
+
+## 2026-10-20 Preschool three-bubble audit: Career & Work Readiness
+- Fresh focused source audit confirmed 16 unique course cards in the Preschool directory and inspected Career Weeks 01–03 and Digital Literacy Week 02. Career Week 01 had no print-evidence heading and all three weeks inherited emergency-readiness subtitles.
+- Corrected all three Career week titles and added five daily printable Khaemenes Academy/student/date/caregiver identification headers to Week 01; Weeks 02–03 already carried five print-identification elements each.
+- Replaced Career Week 01's 15 generic questions with 15 distinct career/teamwork/communication/safety questions. Adapted Week 02 prior-week check to accept correctly scored legacy attempts or revised questions without changing localStorage namespace.
+- Remaining open: Career Week 02/03 curricular content and question depth, all-course print header consistency (including subject and specific unit/lesson), rendered 255px/offline/keyboard/print QA, and independent educator acceptance. No production certification claimed.
