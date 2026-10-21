@@ -23,3 +23,10 @@ Updated: 2026-10-20 · Branch: main
 - Added original optional picture sequencing, pretend scoop counting (1–6), and three-step ingredient/recipe picture planning to Kindergarten Culinary Weeks 01–03. All work with plain HTML/CSS/JS and require no services or purchases.
 - Sequencing presents four intentionally mixed cards and requires safe order, provides retry/reset; measuring uses range and accessible buttons/output; recipe builder offers pretend food and counts with a printable adult-guided plan. Interactive play does not alter formal quiz attempts or mastery status.
 - Re-fetched all 3 main-branch weekly HTML pages: all have 5 lessons, 3 practice cards, 15 formal quiz questions, unique HTML IDs and valid JavaScript syntax. Browser interaction, small-screen layout, pop-up print, offline and keyboard validation remain pending.
+
+## 2026-10-20 Week-progressive Culinary games
+- Week 01 remains guided picture sequencing, pretend scoop counting, and safe recipe picture practice.
+- Week 02 upgraded to independent four-step sequencing, one-to-four whole paper circles compared with halves, and two-bowl pretend ingredient quantity comparisons.
+- Week 03 upgraded to six-item adult-vs-child safety roles, a five-step final recipe showcase plan with printable reflection, and recipe safety revision decisions.
+- All game activities remain optional and separate from 15-question weekly banks and storage/mastery gates.
+- Re-fetched all three pages: 5 lessons, 15 assessment questions, 3 play cards, no duplicate HTML IDs and parsable scripts per file. Actual cross-browser gameplay, print popup and 255px usability checks still pending.
