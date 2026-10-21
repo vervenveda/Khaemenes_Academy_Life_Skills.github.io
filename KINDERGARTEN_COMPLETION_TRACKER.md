@@ -125,3 +125,9 @@ Updated: 2026-10-20 · Branch: main
 - Re-fetched all three week files: exactly 5 instructional blocks and 5 original lessons per week, 15 intact assessment questions per week, visible portfolio restore/print-note code, no JavaScript parsing errors.
 - Existing learner storage, progression, assessment logic and authored games were not changed. Full browser, offline, responsive and print-output acceptance remains pending.
 - Next depth candidates: Gardening, Creativity and other age-appropriate courses; keep lessons substantial without clutter.
+
+## Halfway-audit Bubble 2 — Gardening & Food Growing curriculum depth
+- Deepened all 15 Gardening lessons across Weeks 01–03 with individual subject-specific explanations and worked examples, guided picture/card practices, independently drawable learning evidence and caregiver teaching notes.
+- Scientific care emphasized: observation vs expectation, diverse real plant requirements, different habitats, suitable light/water, no tasting seeds or touching insects, safe alternatives to real seeds/soil, accessible container/paper gardens, privacy-respecting portfolio.
+- Re-fetched the 3 weekly pages after commits: each contains 5 new teaching-depth blocks and 5 lessons, intact 15-question bank, portfolio JSON restore and print-note support; all embedded JavaScript passed syntax validation.
+- Academic/runtime caveat: live-browser, print-page visual inspection, offline persistence and 255px keyboard/accessibility acceptance remain pending. Previous Home Management was depth-enhanced similarly.
