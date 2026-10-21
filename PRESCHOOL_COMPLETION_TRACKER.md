@@ -89,3 +89,19 @@
 - Committed Days 6–10 Preschool Little Safety Helpers. Picture-based lessons cover caregiver-led evacuation decisions, shelter decisions, accessible communication, emergency supply awareness, and keeping pets and people safe.
 - Week 02 locally checks five Week 01 practice records, matching learner code, 80% knowledge attempt, and caregiver review; this remains editable and unauthenticated.
 - Five lessons and a fifteen-question knowledge bank are in source; browser, keyboard, 255px, printing and educator review remain pending.
+
+## 2026-10-20: Sixteen-subject Preschool classroom structure checkpoint
+- All 16 course directories have three HTML weekly classroom pages (15 day lesson sections per course; 240 sections in the planned scope).
+- Added Emergency Readiness Week 03 and eight additional Preschool courses: Transportation & Navigation, Digital Literacy & Citizenship, Civic & Community Living, Career & Work Readiness, Entrepreneurship & Small Business, Relationships & Communication, Caregiving & Family Responsibilities, Legal & Consumer Literacy.
+- Active Preschool directory now lists 16 unique clickable course entries and zero stale 'pending' cards (checked against the directory source).
+- Corrected local prior-week prerequisite keys across the Week 02 and Week 03 pages of Transportation, Digital Literacy, Civic and Career courses; checked representative assessment pools and JavaScript parser syntax for seven weekly files.
+- IMPORTANT: Structural completion is not A+++ acceptance. Newly added eight courses have concise draft lesson prose and repetitive auto-derived assessment distractors and require original curriculum deepening, topic-specific assessment validation and independent educator review.
+
+### Five bubbles from the forensic triage — actionable priority
+1. **Mastery integrity and repeatability (P0):** Confirm all 32 Week 02/03 cross-week gates reference the correct prior namespace *and* prior week's complete exact question-answer map; test both passes and blocked entries, learner switching, manual storage corruption and export/import. Device-local progress is mutable, so do not claim authenticated certification.
+2. **Substantive curriculum and valid questions (P0):** Replace repeated generic question distractors in the newly scaffolded courses with rich topic-specific 3x banks and distinctive illustrations, authentic practice games, meaningful child outcomes and independent teaching review. Verify each of 240 daily lessons has all required content.
+3. **Print evidence and learner identification (P1):** Current shared print CSS hides Academy page header; printouts need *Khaemenes Academy*, course, Preschool, week/unit/lesson, learner name or code, date and caregiver signoff on every page. Test pagination and no blank or cropped pages.
+4. **Real-device accessibility and privacy QA (P1):** Test at 255px, portrait tablets, keyboard/focus trap, screen readers, reduced motion, zero-network/offline use, shared-device learner separation and export/recovery. HTML commits are not browser acceptance.
+5. **Navigation and progression assurance (P1):** Remove inherited Emergency Readiness headings or other template carryovers in newer courses; verify all 16 portals, breadcrumbs, internal and external navigation, capstone criteria and age/stage handoff, as well as any stale language in the tracker.
+
+Audit scope: repository content checks and seven sampled week-page JavaScript syntax checks, not automated exhaustive 48-page/browser end-to-end testing. No production qualification implied.
