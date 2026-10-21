@@ -6,6 +6,7 @@ on:
     paths:
       - 'courses/culinary-independence/higher/cula-101/**'
       - 'tools/audit_cula101_culinary.py'
+      - 'tools/audit_cula201_unit13.py'
       - 'tools/test_cula101_culinary_browser.spec.cjs'
       - '.github/workflows/cula101-culinary-audit.yml'
 jobs:
@@ -20,6 +21,8 @@ jobs:
           node-version: '22'
       - name: CULA 101 Culinary learner journey contracts
         run: python3 tools/audit_cula101_culinary.py > cula101-culinary-source-audit.json
+      - name: Verify Year 2 Unit 13 financial and assessment chain
+        run: python3 tools/audit_cula201_unit13.py
       - name: Check classroom JavaScript syntax
         run: |
           python3 - <<'PY'
