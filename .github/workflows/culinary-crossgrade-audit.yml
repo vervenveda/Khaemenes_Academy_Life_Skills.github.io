@@ -12,5 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate shared dietary JavaScript syntax
+        run: node --check courses/culinary-independence/dietary-companion.js
       - name: Verify all local navigation and dietary script links
         run: python3 tools/audit_culinary_crossgrade.py
