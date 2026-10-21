@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static source contracts for the CULA 101 Culinary twenty-four-week Units 01–06 journey."""
+"""Static source contracts for the CULA 101 Culinary twenty-five-week Units 01–07 journey."""
 from pathlib import Path
 import json
 import re
@@ -14,13 +14,13 @@ def extract_bank(source, name):
 
 results=[]
 previous_bank=None
-for week in range(1,25):
+for week in range(1,26):
     page=root/f"week-{week:02d}"/"index.html"
     if not page.exists():
         results.append({"week":week,"checks":{"page_exists":False}})
         continue
     s=page.read_text(encoding="utf-8")
-    expected=f"CULA 101 {'Protein Cookery' if week>=21 else ('Baking and Pastry' if week>=17 else ('Plant-Based Cookery' if week>=13 else ('Flavor Science' if week>=9 else ('Professional Kitchen Skills' if week>=5 else ('Professional Kitchen Foundations' if week==4 else 'Culinary Arts')))))} Week {week:02d}"
+    expected=f"CULA 101 {'Menu and Nutrition' if week>=25 else ('Protein Cookery' if week>=21 else ('Baking and Pastry' if week>=17 else ('Plant-Based Cookery' if week>=13 else ('Flavor Science' if week>=9 else ('Professional Kitchen Skills' if week>=5 else ('Professional Kitchen Foundations' if week==4 else 'Culinary Arts'))))))} Week {week:02d}"
     checks={
         "title_and_export_match": f'course:"{expected}"' in s and f'incoming.course!=="{expected}"' in s,
         "learner_key":f'key="khae-culinary-cula101-week{week:02d}-"' in s,
@@ -34,7 +34,7 @@ for week in range(1,25):
         "guarded_restore": 'restoreSignature' in s and 'incoming.learnerCode!==code' in s,
         "written_evidence_prompt": 'My evidence: calculations, comparison, safety reasoning and revisions' in s,
         "practice_evidence_confirmation": 'I completed this practice and recorded evidence' in s,
-        "twenty_four_week_path": True,
+        "twenty_five_week_path": True,
         "mastery_garden": 'Mastery earned!' in s,
     }
     if week>1:
