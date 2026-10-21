@@ -168,3 +168,45 @@ test('Grade 4 caregiver rubric persists, exports and isolates records',async({pa
   await openLearner(page,'grade4-rubric-two');
   await expect(page.locator('#note0')).toHaveValue('');
 });
+
+test('Grade 4 rubric JSON restore previews, rejects wrong learner, and resets quiz attempts',async({page})=>{
+  const code='grade4-rubric-restore';
+  await passWeek(page,1,code);
+  await passWeek(page,2,code);
+  await passWeek(page,3,code);
+  for(let i=0;i<5;i++){
+    await page.locator('#rubric-score'+i).selectOption(String(i%4+1));
+    await page.locator('#rubric-note'+i).fill('Caregiver verified the learner work for criterion '+(i+1)+' and identified a concrete next step.');
+  }
+  await page.locator('#rubric-summary').fill('Revise the serving calculation and explain the allergen-safe choice.');
+  const record=await page.evaluate(code=>JSON.parse(localStorage.getItem('khae-culinary-grade4-week03-'+code)),code);
+  expect(record.rubric.scores).toEqual(['1','2','3','4','1']);
+  expect(record.attempts.length).toBeGreaterThan(0);
+  const exported=JSON.stringify({course:'Grade 4 Culinary Arts Week 03',learnerCode:code,record});
+  await page.locator('#rubric-score0').selectOption('');
+  await expect(page.locator('#rubric-score0')).toHaveValue('');
+  await page.locator('#restore-file').setInputFiles({name:'rubric.json',mimeType:'application/json',buffer:Buffer.from(exported)});
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('PREVIEW');
+  await expect(page.locator('#restore-status')).toContainText('5/5');
+  await expect(page.locator('#rubric-score0')).toHaveValue('');
+  page.on('dialog',dialog=>dialog.accept());
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('Portfolio restored');
+  await expect(page.locator('#rubric-score0')).toHaveValue('1');
+  await expect(page.locator('#rubric-summary')).toHaveValue(/allergen-safe choice/);
+  await expect(page.locator('#progress')).not.toContainText('Mastery earned!');
+  const restored=await page.evaluate(code=>JSON.parse(localStorage.getItem('khae-culinary-grade4-week03-'+code)),code);
+  expect(restored.attempts).toEqual([]);
+  expect(restored.rubric.scores).toEqual(['1','2','3','4','1']);
+  const wrong=JSON.stringify({course:'Grade 4 Culinary Arts Week 03',learnerCode:'different-student',record});
+  await page.locator('#restore-file').setInputFiles({name:'wrong-learner.json',mimeType:'application/json',buffer:Buffer.from(wrong)});
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('Wrong learner or course');
+  await expect(page.locator('#rubric-score0')).toHaveValue('1');
+  const malformed=JSON.stringify({course:'Grade 4 Culinary Arts Week 03',learnerCode:code,record:{...record,rubric:{scores:['9','','','',''],notes:Array(5).fill(''),summary:''}}});
+  await page.locator('#restore-file').setInputFiles({name:'invalid-rubric.json',mimeType:'application/json',buffer:Buffer.from(malformed)});
+  await page.locator('#restore').click();
+  await expect(page.locator('#restore-status')).toContainText('Invalid portfolio format');
+  await expect(page.locator('#rubric-score0')).toHaveValue('1');
+});
