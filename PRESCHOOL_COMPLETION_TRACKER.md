@@ -166,3 +166,10 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Replaced three generic 15-question assessment banks with 45 original domain-related questions. The existing randomized five-question, >=80% mechanism remains; valid older quiz attempts remain recognized in the Week 02/03 predecessor checks through compatibility answer maps. Learner localStorage keys unchanged.
 - Corrected inherited Emergency Readiness week subtitles and added five printable Academy/student/date/caregiver evidence headers to Week 01. Weeks 02 and 03 already had five each.
 - Source re-fetch and JavaScript syntax checks were performed, not browser/255px/offline/print/teacher acceptance testing. The program is not release-certified.
+
+## 2026-10-20 Relationships & Communication Preschool curriculum deepening
+- Replaced all 15 generic Preschool lesson readings, discussion prompts and four-step interactions with subject-specific instruction on feelings, listening, accessible communication, personal boundaries and consent, getting help, kindness, fair turn-taking, apologies, inclusion, and a fictional picture-story capstone.
+- Replaced three generic 15-item banks with 45 subject-specific questions, preserving randomized five-question knowledge checks and the >=80% local progression threshold.
+- Week 02 and 03 prerequisite answer maps now accept correctly scored legacy and revised prior-week attempts; preserved learner localStorage namespaces.
+- Added five printable Academy/student/date/caregiver identification headings to Week 01 and corrected inherited safety-course subtitles across all three weeks.
+- Source-level syntax and structural checks performed; browser, 255px screen, accessibility, offline, printing and educator acceptance remain unverified.
