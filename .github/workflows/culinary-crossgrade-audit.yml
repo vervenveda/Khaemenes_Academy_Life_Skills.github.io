@@ -1,0 +1,16 @@
+name: Culinary cross-grade integrity audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'courses/culinary-independence/**'
+      - 'tools/audit_culinary_crossgrade.py'
+      - '.github/workflows/culinary-crossgrade-audit.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify all local navigation and dietary script links
+        run: python3 tools/audit_culinary_crossgrade.py
