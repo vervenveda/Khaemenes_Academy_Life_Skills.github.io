@@ -60,10 +60,10 @@ const screening=document.createElement('div');screening.innerHTML='<label for="c
 host.querySelector('details').append(screening);
 host.querySelector('#culinary-diet-check').addEventListener('click',()=>{
  const raw=host.querySelector('#culinary-diet-ingredients').value.toLowerCase();
- const terms=raw.split(/[,;\n]/).map(x=>x.trim()).filter(Boolean);
+ const terms=raw.split(/[,;\n]/).map(x=>x.trim().replace(/[^a-z]+/g,' ')).filter(Boolean);
  const hits=[];
  for(const id of selected)for(const word of ingredientMap[id]||[]){
- if(terms.some(t=>(' '+t.replace(/[^a-z]+/g,' ')+' ').includes(' '+word+' ')))hits.push(word+' ('+rules.find(r=>r[0]===id)[1]+')')
+ if(terms.some(t=>(' '+t+' ').includes(' '+word+' ')))hits.push(word+' ('+rules.find(r=>r[0]===id)[1]+')')
  }
  const result=host.querySelector('#culinary-diet-results');
  result.textContent=!terms.length?'Enter an ingredient list to screen.':hits.length?'Potential conflicts to investigate: '+[...new Set(hits)].join('; ')+'. Check full labels and cross-contact.':'No listed keyword conflicts detected. This does NOT verify suitability or absence of allergens; review all ingredients, derivatives and cross-contact.';
