@@ -154,3 +154,9 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Corrected all three Career week titles and added five daily printable Khaemenes Academy/student/date/caregiver identification headers to Week 01; Weeks 02–03 already carried five print-identification elements each.
 - Replaced Career Week 01's 15 generic questions with 15 distinct career/teamwork/communication/safety questions. Adapted Week 02 prior-week check to accept correctly scored legacy attempts or revised questions without changing localStorage namespace.
 - Remaining open: Career Week 02/03 curricular content and question depth, all-course print header consistency (including subject and specific unit/lesson), rendered 255px/offline/keyboard/print QA, and independent educator acceptance. No production certification claimed.
+
+## 2026-10-20 Career & Work Readiness Weeks 02–03 curriculum deepening
+- Replaced ten generic daily lesson readings and guided sequences with specific Preschool material: learner strengths, safe routines, problem solving, accessible communication, rest, helpful community roles, planning, observation, feedback and a caregiver-reviewed pretend-work showcase.
+- Replaced each week's 15-item generic question pool with distinct subject-specific questions (30 revised questions total); 80% randomized five-question structure retained.
+- Week 03 prior-week gate accepts either 15 legacy Week 02 prompts or 15 revised Week 02 prompts for correctly scored local records. Storage namespaces remain unchanged.
+- Verified source JavaScript parsing, 5 lesson sections, 15 questions, 5 print-identification elements per week, and prior namespace through GitHub reads. Actual browser/255px/offline/print and educator QA remain open.
