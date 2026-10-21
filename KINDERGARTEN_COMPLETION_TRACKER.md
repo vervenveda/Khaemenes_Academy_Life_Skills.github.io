@@ -30,3 +30,9 @@ Updated: 2026-10-20 · Branch: main
 - Week 03 upgraded to six-item adult-vs-child safety roles, a five-step final recipe showcase plan with printable reflection, and recipe safety revision decisions.
 - All game activities remain optional and separate from 15-question weekly banks and storage/mastery gates.
 - Re-fetched all three pages: 5 lessons, 15 assessment questions, 3 play cards, no duplicate HTML IDs and parsable scripts per file. Actual cross-browser gameplay, print popup and 255px usability checks still pending.
+
+## 2026-10-20 Kindergarten Home Management launch and Culinary check
+- Audited Culinary weeks 01–03 from committed source: 5 lessons and 15 unique formal questions each, three optional play cards in each week, and prior-week gate presence in Weeks 02–03. Actual browser/game acceptance remains unverified.
+- Created Kindergarten Home Management subject hub and 3 independent weekly classrooms (15 original daily lessons, 45 topic-specific bank questions, optional safe-home helper mini-game, separate Kindergarten home-management localStorage namespaces, caregiver review, printable evidence and JSON export).
+- Repaired Week 03 priorPrefix to read Week 02 (not itself) and corrected week-specific page titles. Verified Week 02 and Week 03 actual prerequisite function with synthetic valid and missing-review records: valid PASS and missing-review DENIED. Retained five-question / 80% score behavior.
+- Updated Kindergarten gateway Home Management card to open course hub and retain optional Preschool review. Source-level checks passed; interactive browser, accessibility, printed evidence and 255px QA pending.
