@@ -218,3 +218,8 @@ Structural coverage recorded as 240/240 lesson sections, **not** 240 independent
 - Culinary Independence Weeks 01–03 already had per-lesson `print-id` identifiers; enriched all 15 existing blocks with unit, numbered lesson and caregiver signature fields, without duplicating print headers.
 - Home Management Weeks 01–03 lacked dedicated print evidence headers; added 15 per-lesson print-only blocks with Academy, Preschool, course, week, unit, sequential lesson, student, date and caregiver fields.
 - All six modified files passed JavaScript parsing; GitHub re-fetch verified 5 lesson sections and five matching headers per file. No quizzes or learner storage keys changed. Rendered print/PDF validation and broader end-to-end QA still pending.
+
+## 2026-10-20 Bubble 03 — Caregiving and Legal Consumer assessment renewal
+- Replaced 90 day-number/template-driven prompts with 90 distinct question prompts across Caregiving & Family Responsibilities and Legal & Consumer Literacy (15 each in 6 weekly banks). Questions target the actual daily curriculum: permission, safe caregiving roles, boundaries, accessibility, age-safe tasks, needs, rights/fairness, ads, price comparisons, privacy, receipts, caregiver help and final projects.
+- Week 02 and 03 in each subject now accept three valid prior-week assessment versions: original legacy, intermediate generic 2026 revision, and current lesson-specific quiz. Existing localStorage namespaces and randomized 5-question 80% mechanism unchanged.
+- Re-fetched all six files: each has 15 distinct question prompts, five print-identification sections, and parsable JS. This is source-level verification; learner browser journeys, rendered print and educator review remain outstanding.
