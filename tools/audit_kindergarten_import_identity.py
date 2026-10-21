@@ -11,7 +11,12 @@ for page in sorted(root.glob("*/week-*/index.html")):
     source = page.read_text(encoding="utf-8")
     has_import = 'id="restore-go"' in source
     weak = '!incoming.course.toLowerCase().includes(' in source
-    exact = 'incoming.course!==("Kindergarten "' in source
+    exported = re.search(r'JSON\.stringify\(\{course:"([^"]+)",learnerCode:code', source)
+    exported_title = exported.group(1) if exported else None
+    literal_exact = exported_title is not None and ("incoming.course!=="+json.dumps(exported_title, ensure_ascii=False)) in source
+    computed_exact = 'incoming.course!==("Kindergarten "' in source
+    expected_computed = ("Kindergarten " + " ".join(part.capitalize() for part in page.parent.parent.name.split("-")) + " Week " + page.parent.name.split("-")[-1])
+    exact = literal_exact or (computed_exact and exported_title == expected_computed)
     preview = "previewSignature" in source
     confirmation = "window.confirm" in source
     quiz_reset = "attempts:[]" in source
@@ -22,6 +27,8 @@ for page in sorted(root.glob("*/week-*/index.html")):
         "import": has_import,
         "weak_course_check": weak,
         "exact_course_check": exact,
+        "exported_course_title": exported_title,
+        "import_matches_export": exact,
         "learner_check": learner,
         "preview": preview,
         "confirmation": confirmation,
