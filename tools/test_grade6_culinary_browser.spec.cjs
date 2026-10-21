@@ -141,8 +141,8 @@ test('Grade 6 symposium rubric is printable and saves learner-specific assessmen
   await passWeek(page,2,code);
   await page.goto(weekUrl(3));
   await openLearner(page,code);
-  await expect(page.locator('.rubric')).toContainText('Decimal budgeting and unit-price reasoning');
-  await expect(page.locator('.rubric')).toContainText('Nutrition-label interpretation and recipe clarity');
+  await expect(page.locator('.rubric')).toContainText('Unit-rate budgets and contingency reasoning');
+  await expect(page.locator('.rubric')).toContainText('Source reliability, food-system claims and research questions');
   await page.locator('#rubric-score2').selectOption('3');
   await page.locator('#rubric-note2').fill('Caregiver verified cost per serving and asked for a second unit-price comparison.');
   await page.locator('#rubric-summary').fill('Explain the decimal calculations and show one improvement.');
