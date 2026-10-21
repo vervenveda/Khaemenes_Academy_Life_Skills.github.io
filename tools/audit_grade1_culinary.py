@@ -7,7 +7,7 @@ import sys
 root=Path(__file__).resolve().parents[1]/"courses/culinary-independence/elementary/grade-1"
 def extract_bank(source, name):
     """Read JSON-compatible quiz banks embedded in each classroom."""
-    match=re.search(r"\\b"+re.escape(name)+r"=(\\[.*?\\])(?=,priorBank=|,priorKey=|;let state=)",source)
+    match=re.search(r"\b"+re.escape(name)+r"=(\[.*?\])(?=,priorBank=|,priorKey=|;let state=)",source)
     if not match:
         raise ValueError(f"Missing {name} bank")
     return json.loads(match.group(1))
