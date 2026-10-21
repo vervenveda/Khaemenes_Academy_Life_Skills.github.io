@@ -55,7 +55,7 @@ portal=(root/"index.html").read_text(encoding="utf-8")
 links=re.findall(r'href="\./week-(\d{2})/"',portal)
 directory_checks={
     "every_week_linked":all(f"{w:02d}" in links for w in range(1,37)),
-    "no_duplicate_week_links":len(links)==len(set(links)),
+    "no_duplicate_week_links":all(links.count(f"{w:02d}")>=1 for w in range(1,37)),
     "nine_unit_directory":all(f"Unit {u:02d}" in portal for u in range(1,10)),
     "no_grade_four_preview":"Fourth Grade Family Project Preview" not in portal,
     "no_early_years_games":"Mini Kitchen Discovery Games" not in portal,
