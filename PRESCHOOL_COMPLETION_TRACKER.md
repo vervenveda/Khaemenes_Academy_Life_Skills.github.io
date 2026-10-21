@@ -142,3 +142,9 @@ Audit scope: repository content checks and seven sampled week-page JavaScript sy
 - Each week has fifteen distinct subject-specific knowledge questions and five tailored picture activity sequences. Fixed inherited emergency-readiness header text.
 - Updated Week 03 prior-week answer validation to accept both updated Civic Week 02 quiz answers and original correctly scored legacy questions. localStorage keys unchanged.
 - Only code/source-level checks performed; browser voting interaction, all 255px/offline/print/keyboard and educator acceptance QA remain pending. One Nation For All repository left unchanged.
+
+## 2026-10-20 Digital Literacy Preschool curriculum deepening
+- Replaced generic readings and practice prompts across all 15 Digital Literacy & Citizenship Preschool lessons (Weeks 01–03) with original child-appropriate instruction on age-appropriate screens, privacy, online kindness, breaks, advertising, verifying surprising claims, permission before sharing, trusted helpers and an offline picture-poster showcase.
+- Replaced all three 15-item generic question banks with subject-specific questions (45 prompts total), preserving the five-random-question and >=80% scoring mechanism. Fixed inherited Week 02–03 safety course titles.
+- Week 02 and Week 03 prior-week evidence checks now recognize both legacy valid answers and revised question records without renaming learner localStorage namespaces.
+- JavaScript source syntax checks passed on updated pages. Full browser, quiz replay, screen-reader, offline, 255px and print rendering tests still outstanding. Source is NOT accepted as production-certified.
