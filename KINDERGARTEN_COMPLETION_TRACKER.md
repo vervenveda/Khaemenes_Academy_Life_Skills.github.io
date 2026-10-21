@@ -18,3 +18,8 @@ Updated: 2026-10-20 · Branch: main
 1. Run full-browser end-to-end progression, data corruption and cross-learner isolation tests; verify save/export/print and assess whether quiz attempts persist when storage is disabled.
 2. Provide richer original hands-on (paper-first) picture sequencing, pretend measuring and recipe-building games without mandatory outside services.
 3. Extend the three-week, independently assessed model to the 15 remaining Kindergarten Life Skills subjects, ensuring age progression and no unearned mastery equivalence.
+
+## 2026-10-20 Original interactive Culinary practice lab
+- Added original optional picture sequencing, pretend scoop counting (1–6), and three-step ingredient/recipe picture planning to Kindergarten Culinary Weeks 01–03. All work with plain HTML/CSS/JS and require no services or purchases.
+- Sequencing presents four intentionally mixed cards and requires safe order, provides retry/reset; measuring uses range and accessible buttons/output; recipe builder offers pretend food and counts with a printable adult-guided plan. Interactive play does not alter formal quiz attempts or mastery status.
+- Re-fetched all 3 main-branch weekly HTML pages: all have 5 lessons, 3 practice cards, 15 formal quiz questions, unique HTML IDs and valid JavaScript syntax. Browser interaction, small-screen layout, pop-up print, offline and keyboard validation remain pending.
