@@ -34,5 +34,40 @@ rules.forEach(([id,label])=>{let el=document.createElement('label');el.style.css
 function update(){const arr=[...selected];try{localStorage.setItem(KEY,JSON.stringify(arr))}catch{};summary.textContent=arr.length?'Active dietary learning choices: '+arr.map(id=>rules.find(r=>r[0]===id)[1]).join(' · '):'No dietary exclusions selected; all examples remain educational.';
 guidance.replaceChildren();if(arr.length){let h=document.createElement('h3');h.textContent='Ingredient checks and learning substitutions';guidance.append(h);let ul=document.createElement('ul');arr.forEach(id=>{let rule=rules.find(r=>r[0]===id),li=document.createElement('li');li.textContent=rule[1]+': '+rule[2];ul.append(li)});guidance.append(ul);let p=document.createElement('p');p.textContent='Adapt lesson meal-planning examples to these choices. When an example cannot be safely adapted, choose a paper-based alternative and document the reason. The original curriculum remains visible for academic study.';guidance.append(p)}
 let clashes=conflicts.filter(([a,b])=>selected.has(a)&&selected.has(b));warn.textContent=clashes.length?'Review potentially conflicting choices: '+clashes.map(x=>x.join(' and ')).join('; ')+'. Choose the stricter applicable exclusion and verify ingredients.':''}
+
+// Optional ingredient screening is a learning aid, not an allergen certification.
+const ingredientMap={
+'vegan':['milk','cheese','butter','whey','casein','egg','honey','beef','pork','chicken','turkey','fish','shrimp','gelatin'],
+'vegetarian':['beef','pork','chicken','turkey','fish','shrimp','gelatin'],
+'pescatarian':['beef','pork','chicken','turkey','gelatin'],
+'no-pork':['pork','bacon','ham','lard','pork gelatin','prosciutto','pepperoni'],
+'no-beef':['beef','tallow','beef broth'],
+'no-poultry':['chicken','turkey','duck','poultry broth'],
+'no-dairy':['milk','cheese','butter','whey','casein','cream','yogurt','ghee'],
+'no-eggs':['egg','mayonnaise','meringue'],
+'no-fish':['fish','anchovy','tuna','salmon','fish sauce'],
+'no-shellfish':['shrimp','prawn','crab','lobster','oyster','mussel','clam'],
+'no-peanuts':['peanut','groundnut'],
+'no-tree-nuts':['almond','cashew','walnut','pecan','pistachio','hazelnut','macadamia'],
+'no-soy':['soy','tofu','tempeh','edamame'],
+'no-wheat':['wheat','semolina','bulgur','couscous','spelt'],
+'gluten-free':['wheat','barley','rye','malt','semolina','bulgur','spelt'],
+'no-sesame':['sesame','tahini'],
+'no-honey':['honey'],
+'no-alcohol':['wine','beer','rum','brandy','vodka','liqueur']
+};
+const screening=document.createElement('div');screening.innerHTML='<label for="culinary-diet-ingredients">Check an example ingredient list (comma-separated; optional)</label><textarea id="culinary-diet-ingredients" rows="2" style="display:block;width:100%;max-width:680px;font:inherit;border:1px solid #9d8764;border-radius:7px;padding:8px" placeholder="Example: pasta, cheese, tomato, olive oil"></textarea><button type="button" id="culinary-diet-check" style="padding:8px;border-radius:7px">Screen example ingredients</button><p id="culinary-diet-results" role="status"></p>';
+host.querySelector('details').append(screening);
+host.querySelector('#culinary-diet-check').addEventListener('click',()=>{
+ const raw=host.querySelector('#culinary-diet-ingredients').value.toLowerCase();
+ const terms=raw.split(/[,;\\n]/).map(x=>x.trim()).filter(Boolean);
+ const hits=[];
+ for(const id of selected)for(const word of ingredientMap[id]||[]){
+ if(terms.some(t=>new RegExp('(^|[^a-z])'+word.replace(/[.*+?^$\\{\\}()|[\\]\\\\]/g,'\\\\host.querySelector('#culinary-diet-clear').addEventListener')+'([^a-z]|$)','i').test(t)))hits.push(word+' ('+rules.find(r=>r[0]===id)[1]+')')
+ }
+ const result=host.querySelector('#culinary-diet-results');
+ result.textContent=!terms.length?'Enter an ingredient list to screen.':hits.length?'Potential conflicts to investigate: '+[...new Set(hits)].join('; ')+'. Check full labels and cross-contact.':'No listed keyword conflicts detected. This does NOT verify suitability or absence of allergens; review all ingredients, derivatives and cross-contact.';
+});
+
 host.querySelector('#culinary-diet-clear').addEventListener('click',()=>{selected.clear();options.querySelectorAll('input').forEach(c=>c.checked=false);update()});update();
 })();
