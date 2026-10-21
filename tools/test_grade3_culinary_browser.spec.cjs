@@ -110,3 +110,15 @@ test('real browser: printable academic evidence contains learner and week metada
   await expect(page.locator('#note0')).toHaveValue('Observed safe counting and explained the plan.');
 });
 
+
+test('Grade 3 expo requires five substantive written records',async({page})=>{
+  const code='grade3-expo-evidence';
+  await passWeek(page,1,code);
+  await passWeek(page,2,code);
+  await passWeek(page,3,code);
+  await page.locator('#note0').fill('Done');
+  await expect(page.locator('#progress')).not.toContainText('Mastery earned!');
+  await expect(page.locator('#progress')).toContainText('4/5 written evidence records');
+  await page.locator('#note0').fill('I compared fraction models, calculated the menu budget, and documented a safer revised plan.');
+  await expect(page.locator('#progress')).toContainText('Mastery earned!');
+});
