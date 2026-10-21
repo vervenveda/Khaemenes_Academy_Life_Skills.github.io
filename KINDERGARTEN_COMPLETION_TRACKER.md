@@ -93,3 +93,10 @@ Updated: 2026-10-20 · Branch: main
 - Built original Kindergarten Sustainability hub and Week 01–03 learning pages (15 lessons, 45 questions) covering water/reuse/sorting, nature/resource observations and a final planet-care picture project. Grade gateway links to new hub and keeps optional Preschool review.
 - Caught and repaired initially flat quiz-choice array shape in all three Sustainability weekly pages before signoff. Re-fetched code now has 15 nested three-choice questions per week, valid JS, five lessons each. Week 02 and 03 gates accept synthetic passing records and reject missing caregiver review. Existing portfolio restore and print tools retained.
 - Still pending: actual browser, print, assistive technology, offline and 255px testing; latest deployment of these specific commits not verified.
+
+## Eighth pathway — Emergency Readiness & Resilience
+- Created three-week Kindergarten Emergency Readiness subject hub, three weekly classrooms and gateway entry; Preschool review remains optional and separate.
+- 15 age-appropriate lessons: hazard recognition, caregiver and trusted helpers, stop/move away/tell, weather awareness, local emergency number education without calls, safe plans, respectful calm practices, revision and portfolio.
+- Three distinct 15-question banks, five questions per quiz, 80% mastery, independent local records, caregiver review, printable evidence and JSON recovery. No actual hazard exposure or independent emergency responder training.
+- Re-fetched all three weeks and checked: 5 lessons, 15 questions with 3 answers, correct previous-week namespace, and presence of recovery tools. Week 02/03 validator allowed synthetic complete learner records and denied those missing caregiver review; no visual browser certification yet.
+- Last checked deployment for prior main commit 801a7a7d was pending; newest emergency commits need separate deployment confirmation from the existing hourly watch.
