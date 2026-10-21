@@ -5,6 +5,7 @@ on:
     paths:
       - 'courses/culinary-independence/**'
       - 'tools/audit_culinary_crossgrade.py'
+      - 'tools/test_culinary_dietary_browser.spec.cjs'
       - '.github/workflows/culinary-crossgrade-audit.yml'
   workflow_dispatch:
 jobs:
@@ -12,7 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Validate shared dietary JavaScript syntax
         run: node --check courses/culinary-independence/dietary-companion.js
       - name: Verify all local navigation and dietary script links
         run: python3 tools/audit_culinary_crossgrade.py
+      - name: Install browser test runner
+        run: |
+          npm install --no-save --no-package-lock @playwright/test@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Exercise dietary choices in a real browser
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/culinary-dietary-http.log 2>&1 &
+          npx playwright test tools/test_culinary_dietary_browser.spec.cjs --browser chromium --workers 1 --reporter=line
