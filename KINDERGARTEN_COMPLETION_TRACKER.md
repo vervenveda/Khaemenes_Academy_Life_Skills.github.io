@@ -112,3 +112,9 @@ Updated: 2026-10-20 · Branch: main
 - **Open bubble 4 (high):** Conduct actual browser journey tests of 80% unlock, JSON round-trip, no data loss, print evidence, keyboard focus, narrow 255px layout and screen readers; source syntax alone does not certify runtime.
 - **Open bubble 5 (medium):** Deployment acceptance and offline claims require live static-host checks, caching/reload tests and Pages workflow confirmation for most recent commit; a successful GitHub workflow is not proof of app functionality.
 - Print and import progress remains child-local; no real purchases or emergency simulations. Keep all future repairs on main, preserve records/assessment keys.
+
+## Halfway-audit Bubble 1 repaired — 2026-10-20
+- Inspected 21 non-Culinary Kindergarten weekly classrooms (7 subjects × 3 weeks). Confirmed inherited cooking-specific warning and kitchen-competence description in Home Management, Gardening, Creativity, Health, Finance and Sustainability. Emergency had already had its warning corrected but retained repeated 'My My' titles in Weeks 02/03.
+- Updated 18 non-Culinary pages with subject-specific learner safeguards and accurate knowledge-check language; cleaned repeated 'My' headings in the affected pages, including Emergency Weeks 02/03.
+- Re-fetched all 21 classrooms after changes: all passed JS syntax parsing, retained 15-question banks, and no longer contained inherited 'real kitchen competence', the inherited kitchen warning, or repeated 'My My' course titles.
+- Remaining priorities: expand lesson instructional depth, differentiated games, browser/keyboard/255px testing and deployed/offline verification. The work was committed to main; not yet certified in a browser.
