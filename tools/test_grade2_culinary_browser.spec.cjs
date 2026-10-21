@@ -109,3 +109,15 @@ test('real browser: printable academic evidence contains learner and week metada
   await expect(page.locator('#quiz')).toBeHidden();
   await expect(page.locator('#note0')).toHaveValue('Observed safe counting and explained the plan.');
 });
+
+test('Grade 2 showcase requires substantive evidence, not only checkboxes and quiz',async({page})=>{
+  const code='showcase-evidence-test';
+  await passWeek(page,1,code);
+  await passWeek(page,2,code);
+  await passWeek(page,3,code);
+  await page.locator('#note0').fill('Done');
+  await expect(page.locator('#progress')).not.toContainText('Mastery earned!');
+  await expect(page.locator('#progress')).toContainText('4/5 written evidence records');
+  await page.locator('#note0').fill('I compared the quantities and explained the safety choice to my caregiver.');
+  await expect(page.locator('#progress')).toContainText('Mastery earned!');
+});
