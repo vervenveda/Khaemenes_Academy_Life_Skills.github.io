@@ -8,6 +8,9 @@ on:
       - 'tools/audit_kindergarten.py'
       - 'tools/audit_kindergarten_import_identity.py'
       - 'tools/audit_kindergarten_learner_journey.py'
+      - 'tools/audit_life_skills_routes.py'
+      - 'tools/audit_stage_parity.py'
+      - 'docs/life-skills-route-manifest.json'
       - '.github/workflows/kindergarten-source-audit.yml'
 jobs:
   inspect:
@@ -25,6 +28,10 @@ jobs:
         run: python3 tools/audit_kindergarten_import_identity.py > kindergarten-import-identity-audit.json
       - name: Verify learner-journey source contracts
         run: python3 tools/audit_kindergarten_learner_journey.py > kindergarten-learner-journey-audit.json
+      - name: Verify canonical stage/route manifest
+        run: python3 tools/audit_life_skills_routes.py > life-skills-route-audit.json
+      - name: Verify cross-stage parity baseline
+        run: python3 tools/audit_stage_parity.py > life-skills-stage-parity.json
       - name: Preserve audit evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -34,4 +41,6 @@ jobs:
             kindergarten-source-audit.json
             kindergarten-import-identity-audit.json
             kindergarten-learner-journey-audit.json
+            life-skills-route-audit.json
+            life-skills-stage-parity.json
           if-no-files-found: warn
