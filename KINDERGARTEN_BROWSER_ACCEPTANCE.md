@@ -40,3 +40,9 @@ Test Chrome/Firefox or Safari with a new learner code and a second existing lear
 - Do not claim full offline support until tested on target desktop, tablet and mobile devices.
 
 Record date, browser/version, platform, viewport, tested subject/week, learner-code alias (never learner's real identifying data), result, screenshot if appropriate, and defect/commit reference.
+
+
+## Automated Chromium companion
+The workflow `.github/workflows/early-learning-browser-acceptance.yml` now automates 255px viewport checks, keyboard-focus progression, status/live-region contracts, learner persistence/switching, corrupted-storage refusal, 80% gates, JSON export/import preview behavior, representative game/dialog interaction, PDF generation and standalone local-file reopening. See `docs/EARLY_LEARNING_BROWSER_CERTIFICATION.md`.
+
+This checklist remains authoritative for human-only acceptance items such as actual assistive-technology speech and visual PDF inspection. A green Chromium workflow must not be described as full screen-reader or device certification.
