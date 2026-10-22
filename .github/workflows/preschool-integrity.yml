@@ -1,0 +1,49 @@
+name: Life Skills Preschool integrity
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'courses/**/preschool/**'
+      - 'courses/preschool/**'
+      - 'qa/preschool-*.js'
+      - 'tools/audit_life_skills_routes.py'
+      - 'tools/audit_stage_parity.py'
+      - 'docs/life-skills-route-manifest.json'
+      - '.github/workflows/preschool-integrity.yml'
+  pull_request:
+    paths:
+      - 'courses/**/preschool/**'
+      - 'courses/preschool/**'
+      - 'qa/preschool-*.js'
+      - 'tools/audit_life_skills_routes.py'
+      - 'tools/audit_stage_parity.py'
+      - 'docs/life-skills-route-manifest.json'
+      - '.github/workflows/preschool-integrity.yml'
+
+jobs:
+  preschool-integrity:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Modelled mastery regression
+        run: node qa/preschool-mastery-regression.js
+      - name: Modern-schema direct-source gates
+        run: node qa/preschool-modern-gates.js
+      - name: Production direct-source gates
+        run: node qa/preschool-production-gates.js
+      - name: Canonical route manifest
+        if: hashFiles('tools/audit_life_skills_routes.py') != ''
+        run: python3 tools/audit_life_skills_routes.py
+      - name: Cross-stage parity inventory
+        if: hashFiles('tools/audit_stage_parity.py') != ''
+        run: python3 tools/audit_stage_parity.py
