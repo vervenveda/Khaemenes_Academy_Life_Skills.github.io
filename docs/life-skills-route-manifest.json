@@ -1,0 +1,386 @@
+{
+  "schema": "khaemenes-life-skills-route-manifest-v1",
+  "version": "2026-10-22",
+  "policy": {
+    "preschool": "pathway-first: courses/<pathway>/preschool/",
+    "kindergarten": "accepted stage-first bridge: courses/kindergarten/<pathway>/",
+    "laterStages": "pathway-first unless a documented stage bridge explicitly says otherwise",
+    "rationale": "Preserve established Kindergarten URLs; do not move working learner records or published routes."
+  },
+  "counts": {
+    "pathways": 16,
+    "preschoolDedicated": 16,
+    "kindergartenDedicated": 8,
+    "kindergartenFoundationReview": 8
+  },
+  "pathways": [
+    {
+      "order": 1,
+      "code": "CUL",
+      "slug": "culinary-independence",
+      "title": "Culinary Independence",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/culinary-independence/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/culinary-independence/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/culinary-independence/preschool/"
+      }
+    },
+    {
+      "order": 2,
+      "code": "HOM",
+      "slug": "home-management",
+      "title": "Home Management",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/home-management/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/home-management/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/home-management/preschool/"
+      }
+    },
+    {
+      "order": 3,
+      "code": "GAR",
+      "slug": "gardening-food-growing",
+      "title": "Gardening & Food Growing",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/gardening-food-growing/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/gardening-food-growing/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/gardening-food-growing/preschool/"
+      }
+    },
+    {
+      "order": 4,
+      "code": "CRE",
+      "slug": "creativity-arts-making",
+      "title": "Creativity, Arts & Making",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/creativity-arts-making/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/creativity-arts-making/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/creativity-arts-making/preschool/"
+      }
+    },
+    {
+      "order": 5,
+      "code": "ENT",
+      "slug": "entrepreneurship-small-business",
+      "title": "Entrepreneurship & Small Business",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/entrepreneurship-small-business/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/entrepreneurship-small-business/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/entrepreneurship-small-business/",
+        "reviewRoute": "courses/entrepreneurship-small-business/preschool/"
+      }
+    },
+    {
+      "order": 6,
+      "code": "FIN",
+      "slug": "personal-finance",
+      "title": "Personal Finance",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/personal-finance/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/personal-finance/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/personal-finance/preschool/"
+      }
+    },
+    {
+      "order": 7,
+      "code": "HEA",
+      "slug": "health-first-aid-wellbeing",
+      "title": "Health, First Aid & Wellbeing",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/health-first-aid-wellbeing/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/health-first-aid-wellbeing/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/health-first-aid-wellbeing/preschool/"
+      }
+    },
+    {
+      "order": 8,
+      "code": "SAF",
+      "slug": "emergency-readiness-resilience",
+      "title": "Emergency Readiness & Resilience",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/emergency-readiness-resilience/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/emergency-readiness-resilience/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/emergency-readiness-resilience/preschool/"
+      }
+    },
+    {
+      "order": 9,
+      "code": "DIG",
+      "slug": "digital-literacy-citizenship",
+      "title": "Digital Literacy & Citizenship",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/digital-literacy-citizenship/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/digital-literacy-citizenship/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/digital-literacy-citizenship/",
+        "reviewRoute": "courses/digital-literacy-citizenship/preschool/"
+      }
+    },
+    {
+      "order": 10,
+      "code": "CAR",
+      "slug": "career-work-readiness",
+      "title": "Career & Work Readiness",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/career-work-readiness/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/career-work-readiness/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/career-work-readiness/",
+        "reviewRoute": "courses/career-work-readiness/preschool/"
+      }
+    },
+    {
+      "order": 11,
+      "code": "TRN",
+      "slug": "transportation-navigation",
+      "title": "Transportation & Navigation",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/transportation-navigation/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/transportation-navigation/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/transportation-navigation/",
+        "reviewRoute": "courses/transportation-navigation/preschool/"
+      }
+    },
+    {
+      "order": 12,
+      "code": "CIV",
+      "slug": "civic-community-living",
+      "title": "Civic & Community Living",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/civic-community-living/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/civic-community-living/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/civic-community-living/",
+        "reviewRoute": "courses/civic-community-living/preschool/"
+      }
+    },
+    {
+      "order": 13,
+      "code": "REL",
+      "slug": "relationships-communication",
+      "title": "Relationships & Communication",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/relationships-communication/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/relationships-communication/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/relationships-communication/",
+        "reviewRoute": "courses/relationships-communication/preschool/"
+      }
+    },
+    {
+      "order": 14,
+      "code": "SUS",
+      "slug": "sustainability-stewardship",
+      "title": "Sustainability & Resource Stewardship",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/sustainability-stewardship/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "dedicated",
+        "route": "courses/kindergarten/sustainability-stewardship/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ],
+        "reviewRoute": "courses/sustainability-stewardship/preschool/"
+      }
+    },
+    {
+      "order": 15,
+      "code": "FAM",
+      "slug": "caregiving-family-responsibilities",
+      "title": "Caregiving & Family Responsibilities",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/caregiving-family-responsibilities/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/caregiving-family-responsibilities/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/caregiving-family-responsibilities/",
+        "reviewRoute": "courses/caregiving-family-responsibilities/preschool/"
+      }
+    },
+    {
+      "order": 16,
+      "code": "LEG",
+      "slug": "legal-consumer-literacy",
+      "title": "Legal & Consumer Literacy",
+      "preschool": {
+        "status": "dedicated",
+        "route": "courses/legal-consumer-literacy/preschool/",
+        "weeks": [
+          "week-01",
+          "week-02",
+          "week-03"
+        ]
+      },
+      "kindergarten": {
+        "status": "foundation-review",
+        "route": "courses/legal-consumer-literacy/preschool/",
+        "futureDedicatedRoute": "courses/kindergarten/legal-consumer-literacy/",
+        "reviewRoute": "courses/legal-consumer-literacy/preschool/"
+      }
+    }
+  ]
+}
