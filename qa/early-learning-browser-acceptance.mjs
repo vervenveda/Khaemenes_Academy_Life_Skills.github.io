@@ -19,7 +19,7 @@ function record(scope,label,ok,detail=""){
 }
 function extractBank(file){
  const src=fs.readFileSync(file,"utf8");
- const match=src.match(/const\s+bank\s*=\s*(\[[\s\S]*?\])\s*,\s*(?:priorBank|priorPrefix|prefix)=/);
+ const match=src.match(/\bbank\s*=\s*(\[[\s\S]*?\])\s*(?=,\s*(?:priorBank|priorPrefix|prefix)\s*=|;\s*const\s+)/);
  if(!match)throw new Error("Unable to extract bank from "+file);
  return new Function("return ("+match[1]+")")();
 }
