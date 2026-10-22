@@ -35,15 +35,30 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify all 16 Preschool pathways are represented
+        run: node qa/preschool-coverage-audit.js | tee preschool-coverage-audit.json
       - name: Modelled mastery regression
-        run: node qa/preschool-mastery-regression.js
+        run: node qa/preschool-mastery-regression.js | tee preschool-mastery-regression.txt
       - name: Modern-schema direct-source gates
-        run: node qa/preschool-modern-gates.js
+        run: node qa/preschool-modern-gates.js | tee preschool-modern-gates.txt
       - name: Production direct-source gates
-        run: node qa/preschool-production-gates.js
+        run: node qa/preschool-production-gates.js | tee preschool-production-gates.txt
       - name: Canonical route manifest
         if: hashFiles('tools/audit_life_skills_routes.py') != ''
-        run: python3 tools/audit_life_skills_routes.py
+        run: python3 tools/audit_life_skills_routes.py > life-skills-route-audit.json
       - name: Cross-stage parity inventory
         if: hashFiles('tools/audit_stage_parity.py') != ''
-        run: python3 tools/audit_stage_parity.py
+        run: python3 tools/audit_stage_parity.py > life-skills-stage-parity.json
+      - name: Preserve Preschool integrity evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preschool-integrity
+          path: |
+            preschool-coverage-audit.json
+            preschool-mastery-regression.txt
+            preschool-modern-gates.txt
+            preschool-production-gates.txt
+            life-skills-route-audit.json
+            life-skills-stage-parity.json
+          if-no-files-found: warn
