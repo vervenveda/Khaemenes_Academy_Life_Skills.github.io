@@ -52,3 +52,69 @@ function culinary(week){
 }
 culinary(2);culinary(3);
 console.log("PASS "+checks+" live-source Culinary and Home Management prerequisite checks");
+
+
+/* Expanded direct-source coverage for the six earlier modern-schema Preschool pathways. */
+const expandedCourses=[
+ "gardening-food-growing",
+ "creativity-arts-making",
+ "health-first-aid-wellbeing",
+ "personal-finance",
+ "sustainability-stewardship",
+ "emergency-readiness-resilience"
+];
+
+function parseObjectLiteral(src,name){
+ const re=new RegExp("const\\s+"+name+"\\s*=\\s*(\\{[\\s\\S]*?\\});");
+ const match=src.match(re);
+ if(!match)return null;
+ return new Function("return ("+match[1]+")")();
+}
+function expandedGate(slug,week){
+ const src=fs.readFileSync(require("path").join(root,"courses",slug,"preschool","week-0"+week,"index.html"),"utf8");
+ const prefixMatch=src.match(/const\s+priorPrefix="([^"]+)"/);
+ const fnStart=src.indexOf("function priorReady("),fnEnd=src.indexOf("function openLearner",fnStart);
+ assert(prefixMatch&&fnStart>=0&&fnEnd>fnStart,slug+" Week "+week+" production gate source");
+ const fnSource=src.slice(fnStart,fnEnd);
+ let answerName=null,answers=null;
+ for(const name of ["priorAnswers","previousAnswers"]){
+   const parsed=parseObjectLiteral(src,name);
+   if(parsed){answerName=name;answers=parsed;break}
+ }
+ if(!answers){
+   const expected=fnSource.match(/const\s+expectedCorrect\s*=\s*(\{[\s\S]*?\});/);
+   assert(expected,slug+" Week "+week+" answer map");
+   answers=new Function("return ("+expected[1]+")")();
+ }
+ const records=new Map(),storage={getItem:key=>records.get(key)||null};
+ const prelude='const priorPrefix='+JSON.stringify(prefixMatch[1])+';'+
+   (answerName?'const '+answerName+'='+JSON.stringify(answers)+';':'');
+ const priorReady=new Function("localStorage",prelude+fnSource+";return priorReady;")(storage);
+ return {records,key:prefixMatch[1]+"sample-learner",priorReady,answers};
+}
+for(const slug of expandedCourses)for(const week of [2,3]){
+ const {records,key,priorReady,answers}=expandedGate(slug,week);
+ const prompts=Object.keys(answers).slice(0,5);
+ assert.strictEqual(prompts.length,5,slug+" Week "+week+" has five predecessor answers");
+ const correctItems=prompts.map(prompt=>({prompt,correct:answers[prompt],selected:answers[prompt]}));
+ const valid={done:Array(5).fill(true),review:true,adult:"Sample caregiver",attempts:[{score:100,items:correctItems}]};
+ const run=value=>{records.set(key,JSON.stringify(value));return priorReady("sample-learner")};
+ test(slug+" W"+week+" valid",run(valid),true);
+ test(slug+" W"+week+" 80",run({...valid,attempts:[{score:80,items:correctItems.map((item,i)=>i<4?item:{...item,selected:"Incorrect practice response"})}]}),true);
+ test(slug+" W"+week+" 60",run({...valid,attempts:[{score:60,items:correctItems.map((item,i)=>i<3?item:{...item,selected:"Incorrect practice response"})}]}),false);
+ test(slug+" W"+week+" forged score",run({...valid,attempts:[{score:100,items:correctItems.map((item,i)=>i<3?item:{...item,selected:"Incorrect practice response"})}]}),false);
+ test(slug+" W"+week+" no review",run({...valid,review:false}),false);
+ test(slug+" W"+week+" missing adult",run({...valid,adult:""}),false);
+ test(slug+" W"+week+" incomplete practice",run({...valid,done:[true,true,false,true,true]}),false);
+ const duplicate={...valid,attempts:[{score:100,items:[correctItems[0],correctItems[1],correctItems[2],correctItems[3],correctItems[0]]}]};
+ test(slug+" W"+week+" duplicate prompt",run(duplicate),false);
+ const unknown={...valid,attempts:[{score:100,items:correctItems.map((item,i)=>i?item:{...item,prompt:"Unknown injected question"})}]};
+ test(slug+" W"+week+" unknown prompt",run(unknown),false);
+ const altered={...valid,attempts:[{score:100,items:correctItems.map((item,i)=>i?item:{...item,correct:"Altered answer"})}]};
+ test(slug+" W"+week+" altered answer key",run(altered),false);
+ records.delete(key);
+ test(slug+" W"+week+" no record",priorReady("sample-learner"),false);
+ records.set(key,"{broken json");
+ test(slug+" W"+week+" malformed JSON",priorReady("sample-learner"),false);
+}
+console.log("PASS expanded direct-source prerequisite checks for all six earlier modern-schema Preschool pathways");
