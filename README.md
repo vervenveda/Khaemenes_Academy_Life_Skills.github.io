@@ -1,11 +1,11 @@
 # Khaemenes Academy — Life Skills & Practical Independence
 
-A free, sovereign, accessible Life Skills curriculum branch serving Preschool, Elementary, Middle School, High School, Higher Learning and adult learners.
+A free, sovereign, accessible Life Skills curriculum branch serving Preschool, Kindergarten, Elementary, Middle School, High School, Higher Learning and adult learners.
 
 ## Ownership
-**This repository is the canonical source** for Life Skills curricula, pathway identifiers, and reusable assessment/portfolio standards. Other Academy repositories should link or import versioned, age-adapted resources after verification. The early planning prototype in Higher Learning is retained as a historical/reference copy, not an authoritative master.
+**This repository is the canonical source** for Life Skills curricula, pathway identifiers, route policy, and reusable assessment/portfolio standards. Other Academy repositories should link or import versioned, age-adapted resources only after verification. Earlier planning copies elsewhere in the ecosystem are historical/reference material, not authoritative masters.
 
-## Fourteen pathways
+## Sixteen pathways
 1. Culinary Independence
 2. Home Management
 3. Gardening & Food Growing
@@ -20,22 +20,48 @@ A free, sovereign, accessible Life Skills curriculum branch serving Preschool, E
 12. Civic & Community Living
 13. Relationships & Communication
 14. Sustainability & Resource Stewardship
+15. Caregiving & Family Responsibilities
+16. Legal & Consumer Literacy
 
-## Curriculum structure (planned)
-`courses/<pathway-id>/<stage>/` houses full lessons, original offline readings, practical activities, accessible print evidence, educator notes, assessments and question banks. Shared engines belong in `assets/`. Content manifests will use fixed pathway and stage IDs plus version metadata. Each stage must be pedagogically adapted rather than simply downsized.
+## Curriculum structure
+The binding implementation standard is [`CURRICULUM_STANDARD.md`](./CURRICULUM_STANDARD.md).
+
+- One Life Skills course = **3 instructional weeks / 15 learning days**.
+- All **16 pathways** fit into a **48 + 4 flexible week** annual model.
+- Verified **80% knowledge mastery** is required for weekly progression.
+- Practical safety competency and caregiver/teacher review remain separate from quiz mastery.
+- Learner records stay local unless deliberately exported.
+- No course is represented as professional licensure or accreditation.
+
+### Route policy
+Preschool uses the canonical pathway-first structure:
+
+`courses/<pathway>/preschool/`
+
+Kindergarten is an intentionally preserved stage-first bridge:
+
+`courses/kindergarten/<pathway>/`
+
+Those Kindergarten URLs are established and **must not be moved merely for symmetry**. The machine-readable authority is [`docs/life-skills-route-manifest.json`](./docs/life-skills-route-manifest.json).
+
+## Current implementation state — October 2026
+- **Preschool:** all 16 pathways have dedicated three-week classroom structures with local learner records, mastery gates and caregiver-review boundaries.
+- **Kindergarten:** **8 dedicated pathways / 8 foundation-review pathways**. Dedicated courses currently include Culinary, Home Management, Gardening, Creativity, Health, Personal Finance, Sustainability and Emergency Readiness.
+- **Culinary Independence:** the strongest vertical model, extending through Elementary, Middle School, High School and Higher Learning.
+- **Other pathways:** Preschool foundations and blueprints are in place; later-stage expansion is intentionally being sequenced rather than filled with superficial pages.
+- **Regression protection:** Preschool direct-source integrity CI and Kindergarten source audits are active.
+- **Browser certification:** automated Chromium acceptance now covers dedicated Preschool/Kindergarten pages and critical learner journeys. Real assistive-technology speech and human print/PDF visual review remain manual certification gates.
+
+See [`docs/EARLY_LEARNING_BROWSER_CERTIFICATION.md`](./docs/EARLY_LEARNING_BROWSER_CERTIFICATION.md) for the boundary between automated and manual browser evidence.
 
 ## Academy standards
-- 80% knowledge assessment mastery to unlock the next formal step; practice alone never counts as verified mastery.
-- Hands-on safety demonstrations and teacher/parent verification for practical competencies; no certificates solely from a quiz.
-- Appropriate adult supervision and safety guidance for minors; no claims of professional first-aid or other licensure.
-- Offline-first, no mandatory third-party services, responsive through narrow screens, printable student name/date, grade, unit and lesson.
-- Privacy-preserving evidence, with explicit export/import and no personal information published in the public repository.
-- One canonical master on `main`; release to other repos only after QA and documented validation.
-
-## Current status
-**Foundation only.** The root `index.html` is an interactive catalog with 14 pathways and five stage selectors. Full courses, assessment engines, live browser verification, academic audit, and ecosystem sync are not yet complete.
+- 80% formal knowledge mastery before the next weekly formal step unlocks; practice alone never grants mastery.
+- Adult supervision and explicit safety guidance for age-restricted or hazardous practical tasks.
+- Responsive narrow-screen layouts, keyboard accessibility, printable evidence and offline-capable/local-first learning wherever practical.
+- Import/export routines must preserve learner, subject and week identity and must not silently overwrite existing work.
+- One canonical master on `main`; cross-campus releases follow documented QA.
 
 ## Campus
-[Open Life Skills catalog](./index.html) · [Main Academy](https://vervenveda.com/Khaemenes_Academy.github.io/) · [Higher Learning](https://github.com/vervenveda/Khaemenes_Higher_Learning.github.io)
+[Open Life Skills](./index.html) · [Course outlines](./courses/) · [Preschool](./courses/preschool/) · [Kindergarten](./courses/kindergarten/) · [Main Academy](https://vervenveda.com/Khaemenes_Academy.github.io/) · [Higher Learning](https://vervenveda.com/Khaemenes_Higher_Learning.github.io/)
 
 Jennifer Kay Pearl
