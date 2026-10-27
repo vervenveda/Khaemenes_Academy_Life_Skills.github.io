@@ -42,6 +42,8 @@ body.ecosystem-open{overflow:hidden}.profile-dock{position:fixed;right:12px;bott
 @media print{.profile-dock,.ecosystem-drawer,.ecosystem-backdrop,.ecosystem-toggle{display:none!important}}
 </style><link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.css">
 <link rel="stylesheet" href="https://vervenveda.com/assets/vnv-ecosystem-menu.css">
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-standard.css">
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.css">
 </head><body>
 <header data-khae-header class="khae-global-campus-header">
   <div data-khae-header-inner>
@@ -76,4 +78,5 @@ body.ecosystem-open{overflow:hidden}.profile-dock{position:fixed;right:12px;bott
 <script src="https://vervenveda.com/assets/vnv-beta-link.js" defer></script>
 <script>(()=>{"use strict";const toggle=document.getElementById("ecosystemToggle"),drawer=document.getElementById("ecosystemDrawer"),bg=document.getElementById("ecosystemBackdrop"),close=document.getElementById("ecosystemClose"),search=document.getElementById("ecosystemSearch");let previous=null;function setOpen(open){if(open)previous=document.activeElement;drawer.hidden=!open;bg.hidden=!open;toggle.setAttribute("aria-expanded",String(open));document.body.classList.toggle("ecosystem-open",open);if(open)search.focus();else if(previous&&previous.focus)previous.focus()}toggle.addEventListener("click",()=>setOpen(drawer.hidden));close.addEventListener("click",()=>setOpen(false));bg.addEventListener("click",()=>setOpen(false));document.addEventListener("keydown",e=>{if(drawer.hidden)return;if(e.key==="Escape")setOpen(false);if(e.key==="Tab"){const elements=[...drawer.querySelectorAll('button,a,input')].filter(x=>!x.hidden&&x.offsetParent!==null),first=elements[0],last=elements[elements.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});search.addEventListener("input",()=>{const q=search.value.trim().toLowerCase();drawer.querySelectorAll("#ecosystemLinks a").forEach(a=>a.hidden=!a.textContent.toLowerCase().includes(q))});})();</script><script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.js" defer></script>
 </body></html>
