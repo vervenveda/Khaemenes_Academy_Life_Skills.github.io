@@ -25,6 +25,12 @@ input,select{border:1.5px solid #826b4b;color:#183741;background:#fffdf8}
 footer{background:#102c35;color:#fff3db;border-top:5px solid #bd9655}
 @media(max-width:330px){header{padding:20px 10px}header h1{font-size:30px}header .page-subtitle{font-size:23px}.card,.panel{padding:13px}}
 @media print{body,main{background:#fff!important;color:#111}header,footer{background:#fff!important;color:#111!important;border-color:#555}header h1,header .page-subtitle,header p{color:#111!important}.card,.panel{box-shadow:none!important;border:1px solid #555}}
+
+/* Academy Front Desk parity · lightweight geometry only; campus colors and functions are preserved. */
+:where(.card,.school,.campus-card,.path-card,.course-card,.feature-card){box-sizing:border-box;min-width:0}
+:where(.grid,.cards,.school-grid,.course-grid,.campus-grid){justify-content:center;align-items:stretch}
+:where(.card,.school,.campus-card,.path-card,.course-card,.feature-card) :where(a,button){border-radius:7px}
+:where(.card,.school,.campus-card,.path-card,.course-card,.feature-card) :where(.btn,.button,.card-action){box-sizing:border-box;min-height:42px;text-align:center;overflow-wrap:break-word}
 </style><style>
 /* Academy ecosystem drawer: reusable High School interaction pattern */
 .ecosystem-toggle{background:#f0dec0;color:#163641;border:1px solid #b48e54;padding:6px 11px;font-size:12px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:7px}
