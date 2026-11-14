@@ -1,0 +1,42 @@
+name: Life Skills Global Standard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/life-skills-global-standard-v1.js'
+      - 'tools/life-skills-global-standard-audit.mjs'
+      - '.github/workflows/life-skills-global-standard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Life Skills typography and chrome authority
+        run: node tools/life-skills-global-standard-audit.mjs --write
+      - name: Verify Life Skills global standard coverage
+        run: node tools/life-skills-global-standard-audit.mjs --check
+      - name: Validate patch
+        run: git diff --check
+      - name: Commit normalization
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No Life Skills pages required global-standard repair."
+            exit 0
+          fi
+          git config user.name "Khaemenes Academy Automation"
+          git config user.email "khaemenesacademy@users.noreply.github.com"
+          git add -A -- ':!node_modules' ':!.git'
+          git commit -m "Standardize Life Skills global chrome and typography"
+          git push
