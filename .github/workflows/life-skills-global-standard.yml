@@ -6,6 +6,7 @@ on:
     paths:
       - 'assets/life-skills-global-standard-v1.js'
       - 'tools/life-skills-global-standard-audit.mjs'
+      - 'tools/semantic-hierarchy-audit.mjs'
       - '.github/workflows/life-skills-global-standard.yml'
   workflow_dispatch:
 
@@ -26,6 +27,8 @@ jobs:
         run: node tools/life-skills-global-standard-audit.mjs --write
       - name: Verify Life Skills global standard coverage
         run: node tools/life-skills-global-standard-audit.mjs --check
+      - name: Verify semantic title eyebrow hierarchy
+        run: node tools/semantic-hierarchy-audit.mjs
       - name: Validate patch
         run: git diff --check
       - name: Commit normalization
