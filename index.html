@@ -11,6 +11,11 @@
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" defer data-vnv-ticker-autopopulate></script>
 <script src="https://vervenveda.com/assets/vnv-header-autopopulate.js" defer data-official-vnv-header="true"></script>
 <script src="./assets/life-skills-minimal-header-mount-v1.js" defer data-life-skills-minimal-header="v1"></script>
+<style id="life-skills-canonical-dual-ticker-stack">
+:root{--ticker-height:33px;--vnv-autopopulate-ticker-height:33px}
+body > #vnvTickerAutoPopulate{top:var(--ticker-height,33px)!important}
+body > #vnvHeaderAutoPopulate{top:calc(var(--ticker-height,33px) + var(--vnv-autopopulate-ticker-height,33px))!important}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -30,8 +35,8 @@
       <p>Choose the pathway into Life Skills that belongs to you.</p>
       <nav class="life-action-grid" aria-label="Life Skills program access">
         <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Learner Profile</a>
-        <a href="./courses/">Explore Pathways</a>
         <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Parent Profile</a>
+        <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/enroll/">Enrollment</a>
       </nav>
     </div>
   </section>
@@ -76,8 +81,12 @@ window.addEventListener("DOMContentLoaded",()=>{
 },{once:true});
 </script>
 <script src="./assets/life-skills-landing-class-tools-v1.js" defer data-life-skills-landing-class-tools="v1"></script>
-<script src="https://vervenveda.com/assets/vnv-language.js" defer data-official-vnv-language="true"></script>
+<script src="https://vervenveda.com/assets/khaemenes-campus-phrases.js" defer></script>
+<script src="https://vervenveda.com/assets/khaemenes-interlingual-core.js" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/khaemenes-translator-loader.js?v=1.1.1" defer></script>
+<script src="https://vervenveda.com/assets/vnv-language.js?v=20261108-cream-buttons" defer data-official-vnv-language="true"></script>
 <script src="https://vervenveda.com/assets/vnv-class-tools-toolbar.js" defer data-vnv-class-tools="life-skills-landing"></script>
-<script src="https://vervenveda.com/assets/vnv-descriptive-card-dialog-v1.js" defer data-vnv-descriptive-card-dialog="v1"></script>\n<script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js" defer data-official-vnv-ecosystem-toolbar="true"></script>
+<script src="https://vervenveda.com/assets/vnv-descriptive-card-dialog-v1.js" defer data-vnv-descriptive-card-dialog="v1"></script>
+<script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js" defer data-official-vnv-ecosystem-toolbar="true"></script>
 </body>
 </html>
