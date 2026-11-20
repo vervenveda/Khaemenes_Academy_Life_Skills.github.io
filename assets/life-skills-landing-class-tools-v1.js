@@ -1,35 +1,33 @@
 (()=>{"use strict";
 if(window.__KHAE_LIFE_SKILLS_LANDING_TOOLS_V1__)return;
 window.__KHAE_LIFE_SKILLS_LANDING_TOOLS_V1__=true;
-function ensureTranslatorMount(){
- if(document.querySelector("[data-vnv-language-mount]"))return;
- const mount=document.createElement("div");
- mount.id="khaeLifeSkillsTranslatorMount";
- mount.hidden=true;
- mount.setAttribute("data-vnv-language-mount","");
- mount.setAttribute("data-i18n-ignore","");
- document.body.append(mount);
+
+function ensureTranslatorPanel(root){
+ let panel=root?.querySelector("[data-vct-translator-panel]");
+ if(panel)return panel;
+ panel=document.createElement("div");
+ panel.className="vct-pop";
+ panel.setAttribute("data-vct-translator-panel","");
+ panel.hidden=true;
+ panel.innerHTML='<h2>Translate</h2><p>Choose the interface language for this Life Skills page.</p><div data-vnv-language-mount></div>';
+ root?.querySelector("#vnvClassToolsPanel")?.append(panel);
+ return panel;
+}
+function moveCanonicalTranslator(panel){
+ const mount=panel?.querySelector("[data-vnv-language-mount]");
+ const switcher=document.getElementById("vnv-language-switch");
+ if(mount&&switcher&&switcher.parentElement!==mount)mount.append(switcher);
+ document.getElementById("vnv-language-rail")?.remove();
 }
 function openTranslator({root}){
  root.querySelectorAll(".vct-pop").forEach(p=>p.hidden=true);
- let panel=root.querySelector("[data-vct-translator-panel]");
- if(!panel){
-   panel=document.createElement("div");
-   panel.className="vct-pop";
-   panel.setAttribute("data-vct-translator-panel","");
-   const h=document.createElement("h2");h.textContent="Translate";
-   const p=document.createElement("p");p.textContent="Choose the interface language for this Life Skills page.";
-   panel.append(h,p);
-   root.querySelector("#vnvClassToolsPanel")?.append(panel);
- }
- const mount=document.getElementById("khaeLifeSkillsTranslatorMount")||document.querySelector("[data-vnv-language-mount]");
- if(mount){mount.hidden=false;panel.append(mount)}
+ const panel=ensureTranslatorPanel(root);
+ if(!panel)return;
+ moveCanonicalTranslator(panel);
  panel.hidden=false;
  window.VNVLanguage?.refresh?.();
 }
-if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",ensureTranslatorMount,{once:true});else ensureTranslatorMount();
-
-window.KhaemenesClassToolsConfigV1={
+window.KhaemenesClassToolsConfigV1=Object.freeze({
  id:"life-skills-landing",
  match:()=>/\/Khaemenes_Academy_Life_Skills\.github\.io\/(?:index\.html)?$/i.test(location.pathname) || location.hostname==="vervenveda.com"&&/\/Khaemenes_Academy_Life_Skills\.github\.io\/?$/i.test(location.pathname),
  toggleLabel:"Tools",
@@ -43,5 +41,13 @@ window.KhaemenesClassToolsConfigV1={
    {type:"link",label:"Enroll",sub:"Enrollment",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/enroll/"}
  ],
  actions:{translate:openTranslator}
-};
+});
+document.addEventListener("DOMContentLoaded",()=>{
+ setTimeout(()=>{
+  const root=document.getElementById("vnvClassToolsToolbar");
+  if(!root)return;
+  const panel=ensureTranslatorPanel(root);
+  moveCanonicalTranslator(panel);
+ },120);
+},{once:true});
 })();
