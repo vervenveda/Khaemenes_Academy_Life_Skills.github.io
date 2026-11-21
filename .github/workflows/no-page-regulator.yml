@@ -16,3 +16,9 @@ jobs:
           node-version: '22'
       - run: node tools/validate-no-page-regulator.mjs
       - run: node tools/validate-life-skills-landing-shell.mjs
+      - name: Inventory remaining legacy page components (read only)
+        run: node tools/audit-life-skills-page-chrome.mjs > life-skills-chrome-audit.json && node -e 'const r=require("./life-skills-chrome-audit.json"); console.log(JSON.stringify({status:r.status,counts:r.counts,affectedPages:r.affectedPages},null,2))'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: life-skills-chrome-audit
+          path: life-skills-chrome-audit.json
