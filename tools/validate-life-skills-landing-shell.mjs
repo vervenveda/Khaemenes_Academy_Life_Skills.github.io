@@ -5,7 +5,7 @@ const header=fs.readFileSync("assets/life-skills-minimal-header-mount-v1.js","ut
 const tools=fs.readFileSync("assets/life-skills-landing-class-tools-v1.js","utf8");
 const count=(s,re)=>(s.match(re)||[]).length;
 const problems=[];
-const earlyStagePages=["courses/preschool/index.html","courses/kindergarten/index.html","courses/culinary-independence/elementary/grade-1/index.html"];
+const earlyStagePages=["courses/preschool/index.html","courses/kindergarten/index.html","courses/culinary-independence/elementary/grade-1/index.html","courses/culinary-independence/elementary/grade-2/index.html","courses/culinary-independence/elementary/grade-3/index.html"];
 const exact=[
  ["333 ticker loader",count(index,/vnv-333-ticker\.js/g),1],
  ["auto ticker loader",count(index,/vnv-ticker-autopopulate\.js/g),1],
